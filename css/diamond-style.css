@@ -1,0 +1,6 @@
+/* Estilo para reducir el tamaño del símbolo de diamante */
+.diamond-small {
+  font-size: 50%; /* Reduce el tamaño al 50% del texto principal */
+  vertical-align: middle; /* Alinea verticalmente con el texto */
+  display: inline-block; /* Asegura que se apliquen correctamente las propiedades */
+}

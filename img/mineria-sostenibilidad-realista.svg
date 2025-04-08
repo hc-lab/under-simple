@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Fondo con gradiente realista de cielo -->
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a73;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Textura para montañas -->
+    <pattern id="mountainTexture" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M0,50 Q25,30 50,50 T100,50" stroke="#5d6d7e" stroke-width="1" fill="none" />
+      <path d="M0,70 Q25,50 50,70 T100,70" stroke="#5d6d7e" stroke-width="0.8" fill="none" />
+      <path d="M0,30 Q25,10 50,30 T100,30" stroke="#5d6d7e" stroke-width="0.8" fill="none" />
+    </pattern>
+    
+    <!-- Textura para vegetación -->
+    <radialGradient id="treeGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#196f3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <rect x="0" y="0" width="800" height="600" fill="url(#sky)"/>
+  
+  <!-- Montañas con textura realista -->
+  <path d="M0,400 L200,200 L400,350 L600,180 L800,380 L800,600 L0,600 Z" fill="#5d6d7e"/>
+  <path d="M0,400 L200,200 L400,350 L600,180 L800,380 L800,600 L0,600 Z" fill="url(#mountainTexture)" opacity="0.7"/>
+  
+  <!-- Operación minera moderna y sostenible -->
+  <g transform="translate(400,450)">
+    <!-- Edificio principal de operaciones -->
+    <rect x="-100" y="-80" width="200" height="80" rx="5" fill="#34495e"/>
+    <rect x="-90" y="-70" width="180" height="60" fill="#2c3e50"/>
+    
+    <!-- Ventanas del edificio -->
+    <g>
+      <rect x="-80" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="-60" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="-40" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="-20" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="0" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="20" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="40" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="60" y="-60" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      
+      <rect x="-80" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="-60" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="-40" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="-20" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="0" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="20" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="40" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+      <rect x="60" y="-40" width="15" height="15" fill="#3498db" opacity="0.7"/>
+    </g>
+    
+    <!-- Entrada principal -->
+    <rect x="-15" y="-20" width="30" height="20" fill="#7f8c8d"/>
+    
+    <!-- Chimeneas con filtros de emisiones -->
+    <g transform="translate(-70,-80)">
+      <rect x="-10" y="-30" width="20" height="30" fill="#95a5a6"/>
+      <rect x="-15" y="-40" width="30" height="10" fill="#7f8c8d"/>
+      <!-- Filtro de emisiones -->
+      <path d="M-5,-45 C-5,-55 5,-55 5,-45" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+      <path d="M-8,-45 C-8,-60 8,-60 8,-45" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+      <path d="M-12,-45 C-12,-65 12,-65 12,-45" stroke="#bdc3c7" stroke-width="1" fill="none"/>
+      <!-- Emisiones limpias -->
+      <path d="M-3,-65 C-3,-75 3,-75 3,-65" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M-2,-75 C-2,-85 2,-85 2,-75" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.2"/>
+    </g>
+    
+    <g transform="translate(70,-80)">
+      <rect x="-10" y="-30" width="20" height="30" fill="#95a5a6"/>
+      <rect x="-15" y="-40" width="30" height="10" fill="#7f8c8d"/>
+      <!-- Filtro de emisiones -->
+      <path d="M-5,-45 C-5,-55 5,-55 5,-45" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+      <path d="M-8,-45 C-8,-60 8,-60 8,-45" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+      <path d="M-12,-45 C-12,-65 12,-65 12,-45" stroke="#bdc3c7" stroke-width="1" fill="none"/>
+      <!-- Emisiones limpias -->
+      <path d="M-3,-65 C-3,-75 3,-75 3,-65" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M-2,-75 C-2,-85 2,-85 2,-75" stroke="#ecf0f1" stroke-width="1" fill="none" opacity="0.2"/>
+    </g>
+  </g>
+  
+  <!-- Granja solar profesional -->
+  <g transform="translate(200,350)">
+    <!-- Estructura de soporte -->
+    <rect x="-80" y="-5" width="160" height="10" fill="#7f8c8d"/>
+    <rect x="-75" y="5" width="10" height="20" fill="#7f8c8d"/>
+    <rect x="65" y="5" width="10" height="20" fill="#7f8c8d"/>
+    
+    <!-- Paneles solares con detalles -->
+    <g transform="rotate(-15)">
+      <rect x="-70" y="-40" width="140" height="70" fill="#2c3e50"/>
+      <rect x="-65" y="-35" width="130" height="60" fill="#3498db"/>
+      
+      <!-- Detalles de celdas solares -->
+      <g>
+        <rect x="-60" y="-30" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="-35" y="-30" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="-10" y="-30" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="15" y="-30" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="40" y="-30" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        
+        <rect x="-60" y="-10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="-35" y="-10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="-10" y="-10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="15" y="-10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="40" y="-10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        
+        <rect x="-60" y="10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="-35" y="10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="-10" y="10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="15" y="10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+        <rect x="40" y="10" width="20" height="15" fill="#2c3e50" opacity="0.1"/>
+      </g>
+      
+      <!-- Reflejos de luz -->
+      <path d="M-50,-35 L-45,-25" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+      <path d="M-20,-35 L-15,-25" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+      <path d="M10,-35 L15,-25" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+      <path d="M40,-35 L45,-25" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+    </g>
+    
+    <!-- Caja de conexiones -->
+    <rect x="-20" y="25" width="40" height="20" fill="#34495e"/>
+    <rect x="-5" y="35" width="10" height="5" fill="#e74c3c"/>
+    <line x1="0" y1="25" x2="0" y2="-5" stroke="#7f8c8d" stroke-width="2"/>
+  </g>
+  
+  <!-- Parque eólico profesional -->
+  <g transform="translate(600,300)">
+    <!-- Torre principal -->
+    <rect x="-8" y="0" width="16" height="100" fill="#bdc3c7"/>
+    <rect x="-12" y="100" width="24" height="5" fill="#95a5a6"/>
+    <rect x="-15" y="105" width="30" height="5" fill="#7f8c8d"/>
+    
+    <!-- Base de la turbina -->
+    <path d="M-15,110 L-20,120 L20,120 L15,110 Z" fill="#34495e"/>
+    
+    <!-- Góndola -->
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#95a5a6"/>
+    <rect x="-15" y="-5" width="30" height="10" rx="3" fill="#7f8c8d"/>
+    
+    <!-- Rotor y buje -->
+    <circle cx="0" cy="0" r="8" fill="#34495e"/>
+    <circle cx="0" cy="0" r="5" fill="#2c3e50"/>
+    
+    <!-- Aspas con detalles aerodinámicos -->
+    <g>
+      <path d="M0,0 L-5,-10 C-20,-60 -10,-80 0,-90 C10,-80 5,-60 5,-10 Z" fill="#ecf0f1" transform="rotate(0)"/>
+      <path d="M0,0 L-5,-10 C-20,-60 -10,-80 0,-90 C10,-80 5,-60 5,-10 Z" fill="#ecf0f1" transform="rotate(120)"/>
+      <path d="M0,0 L-5,-10 C-20,-60 -10,-80 0,-90 C10,-80 5,-60 5,-10 Z" fill="#ecf0f1" transform="rotate(240)"/>
+    </g>
+  </g>
+  
+  <!-- Planta de tratamiento de agua avanzada -->
+  <g transform="translate(500,500)">
+    <!-- Tanques de tratamiento -->
+    <rect x="-60" y="-40" width="120" height="40" rx="5" fill="#3498db"/>
+    <rect x="-55" y="-35" width="110" height="30" rx="3" fill="#2980b9"/>
+    
+    <!-- Tuberías y conexiones -->
+    <rect x="-40" y="-50" width="10" height="10" fill="#95a5a6"/>
+    <rect x="30" y="-50" width="10" height="10" fill="#95a5a6"/>
+    <rect x="-35" y="-70" width="70" height="20" rx="5" fill="#7f8c8d"/>
+    
+    <!-- Filtros -->
+    <rect x="-30" y="-65" width="10" height="10" fill="#bdc3c7"/>
+    <rect x="-15" y="-65" width="10" height="10" fill="#bdc3c7"/>
+    <rect x="0" y="-65" width="10" height="10" fill="#bdc3c7"/>
+    <rect x="15" y="-65" width="10" height="10" fill="#bdc3c7"/>
+    <rect x="30" y="-65" width="10" height="10" fill="#bdc3c7"/>
+    
+    <!-- Agua tratada saliendo -->
+    <path d="M60,-20 Q80,-20 80,0 T100,20" stroke="#3498db" stroke-width="5" fill="none"/>
+    <path d="M60,-20 Q80,-10 80,10 T100,30" stroke="#3498db" stroke-width="3" fill="none"/>
+    
+    <!-- Indicadores de calidad -->
+    <circle cx="-40" cy="-20" r="5" fill="#2ecc71"/>
+    <circle cx="-20" cy="-20" r="5" fill="#2ecc71"/>
+    <circle cx="0" cy="-20" r="5" fill="#2ecc71"/>
+    <circle cx="20" cy="-20" r="5" fill="#2ecc71"/>
+    <circle cx="40" cy="-20" r="5" fill="#2ecc71"/>
+  </g>
+  
+  <!-- Árboles realistas para reforestación -->
+  <g transform="translate(100,350)">
+    <!-- Tronco -->
+    <rect x="-8" y="0" width="16" height="50" fill="#6d4c41"/>
+    <path d="M-8,0 L-10,0 L-12,10 L-8,15 Z" fill="#5d4037"/>
+    <path d="M8,0 L10,0 L12,10 L8,15 Z" fill="#5d4037"/>
+    
+    <!-- Follaje -->
+    <ellipse cx="0" cy="-30" rx="30" ry="40" fill="url(#treeGradient)"/>
+    <ellipse cx="-15" cy="-10" rx="20" ry="25" fill="url(#treeGradient)"/>
+    <ellipse cx="15" cy="-15" rx="25" ry="30" fill="url(#treeGradient)"/>
+    <ellipse cx="0" cy="-50" rx="20" ry="25" fill="url(#treeGradient)"/>
+  </g>
+  
+  <g transform="translate(150,370) scale(0.8)">
+    <!-- Tronco -->
+    <rect x="-8" y="0" width="16" height="50" fill="#6d4c41"/>
+    <path d="M-8,0 L-10,0 L-12,10 L-8,15 Z" fill="#5d4037"/>
+    <path d="M8,0 L10,0 L12,10 L8,15 Z" fill="#5d4037"/>
+    
+    <!-- Follaje -->
+    <ellipse cx="0" cy="-30" rx="30" ry="40" fill="url(#treeGradient)"/>
+    <ellipse cx="-15" cy="-10" rx="20" ry="25" fill="url(#treeGradient)"/>
+    <ellipse cx="15" cy="-15" rx="25" ry="30" fill="url(#treeGradient)"/>
+    <ellipse cx="0" cy="-50" rx="20" ry="25" fill="url(#treeGradient)"/>
+  </g>
+  
+  <g transform="translate(700,380) scale(0.9)">
+    <!-- Tronco -->
+    <rect x="-8" y="0" width="16" height="50" fill="#6d4c41"/>
+    <path d="M-8,0 L-10,0 L-12,10 L-8,15 Z" fill="#5d4037"/>
+    <path d="M8,0 L10,0 L12,10 L8,15 Z" fill="#5d4037"/>
+    
+    <!-- Follaje -->
+    <ellipse cx="0" cy="-30" rx="30" ry="40" fill="url(#treeGradient)"/>
+    <ellipse cx="-15" cy="-10" rx="20" ry="25" fill="url(#treeGradient)"/>
+    <ellipse cx="15" cy="-15" rx="25" ry="30" fill="url(#treeGradient)"/>
+    <ellipse cx="0" cy="-50" rx="20" ry="25" fill="url(#treeGradient)"/>
+  </g>
+  
+  <!-- Sol con efectos realistas -->
+  <g transform="translate(700,100)">
+    <circle cx="0" cy="0" r="40" fill="#f1c40f"/>
+    <circle cx="0" cy="0" r="35" fill="#f39c12"/>
+    
+    <!-- Rayos solares con gradiente -->
+    <g>
+      <line x1="0" y1="-50" x2="0" y2="-80" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      <line x1="50" y1="0" x2="80" y2="0" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      <line x1="0" y1="50" x2="0" y2="80" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-50" y1="0" x2="-80" y2="0" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      
+      <line x1="35" y1="-35" x2="56" y2="-56" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      <line x1="35" y1="35" x2="56" y2="56" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-35" y1="35" x2="-56" y2="56" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-35" y1="-35" x2="-56" y2="-56" stroke="#f1c40f" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Resplandor solar -->
+    <circle cx="0" cy="0" r="60" fill="#f1c40f" opacity="0.2"/>
+    <circle cx="0" cy="0" r="80" fill="#f1c40f" opacity="0.1"/>
+  </g>
+</svg>

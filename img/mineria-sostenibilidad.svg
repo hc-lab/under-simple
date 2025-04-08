@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Fondo con gradiente de cielo -->
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="800" height="600" fill="url(#sky)"/>
+  
+  <!-- Montañas con mina -->
+  <path d="M0,400 L200,200 L400,350 L600,180 L800,380 L800,600 L0,600 Z" fill="#7f8c8d"/>
+  
+  <!-- Entrada de mina -->
+  <path d="M350,400 C370,380 430,380 450,400 L450,500 L350,500 Z" fill="#34495e"/>
+  
+  <!-- Árboles reforestados -->
+  <g transform="translate(100,350)">
+    <path d="M0,0 L-30,-50 L30,-50 Z" fill="#27ae60"/>
+    <path d="M0,-40 L-25,-80 L25,-80 Z" fill="#27ae60"/>
+    <path d="M0,-70 L-20,-100 L20,-100 Z" fill="#27ae60"/>
+    <rect x="-5" y="0" width="10" height="30" fill="#6d4c41"/>
+  </g>
+  
+  <g transform="translate(180,370)">
+    <path d="M0,0 L-30,-50 L30,-50 Z" fill="#27ae60"/>
+    <path d="M0,-40 L-25,-80 L25,-80 Z" fill="#27ae60"/>
+    <path d="M0,-70 L-20,-100 L20,-100 Z" fill="#27ae60"/>
+    <rect x="-5" y="0" width="10" height="30" fill="#6d4c41"/>
+  </g>
+  
+  <g transform="translate(650,350)">
+    <path d="M0,0 L-30,-50 L30,-50 Z" fill="#27ae60"/>
+    <path d="M0,-40 L-25,-80 L25,-80 Z" fill="#27ae60"/>
+    <path d="M0,-70 L-20,-100 L20,-100 Z" fill="#27ae60"/>
+    <rect x="-5" y="0" width="10" height="30" fill="#6d4c41"/>
+  </g>
+  
+  <g transform="translate(720,380)">
+    <path d="M0,0 L-30,-50 L30,-50 Z" fill="#27ae60"/>
+    <path d="M0,-40 L-25,-80 L25,-80 Z" fill="#27ae60"/>
+    <path d="M0,-70 L-20,-100 L20,-100 Z" fill="#27ae60"/>
+    <rect x="-5" y="0" width="10" height="30" fill="#6d4c41"/>
+  </g>
+  
+  <!-- Panel solar -->
+  <g transform="translate(250,320) rotate(-10)">
+    <rect x="0" y="0" width="80" height="50" fill="#2c3e50"/>
+    <rect x="5" y="5" width="70" height="40" fill="#3498db"/>
+    <line x1="5" y1="15" x2="75" y2="15" stroke="#2c3e50" stroke-width="1"/>
+    <line x1="5" y1="25" x2="75" y2="25" stroke="#2c3e50" stroke-width="1"/>
+    <line x1="5" y1="35" x2="75" y2="35" stroke="#2c3e50" stroke-width="1"/>
+    <line x1="25" y1="5" x2="25" y2="45" stroke="#2c3e50" stroke-width="1"/>
+    <line x1="45" y1="5" x2="45" y2="45" stroke="#2c3e50" stroke-width="1"/>
+    <line x1="65" y1="5" x2="65" y2="45" stroke="#2c3e50" stroke-width="1"/>
+  </g>
+  
+  <!-- Turbina eólica -->
+  <g transform="translate(550,300)">
+    <rect x="-5" y="0" width="10" height="100" fill="#bdc3c7"/>
+    <circle cx="0" cy="0" r="5" fill="#bdc3c7"/>
+    
+    <!-- Aspas -->
+    <g transform="rotate(0)">
+      <path d="M0,0 L-60,-20 L-70,-15 L-10,5 Z" fill="#ecf0f1"/>
+    </g>
+    <g transform="rotate(120)">
+      <path d="M0,0 L-60,-20 L-70,-15 L-10,5 Z" fill="#ecf0f1"/>
+    </g>
+    <g transform="rotate(240)">
+      <path d="M0,0 L-60,-20 L-70,-15 L-10,5 Z" fill="#ecf0f1"/>
+    </g>
+  </g>
+  
+  <!-- Sol -->
+  <circle cx="700" cy="100" r="50" fill="#f1c40f"/>
+  <g transform="translate(700,100)">
+    <line x1="0" y1="-60" x2="0" y2="-80" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="60" y1="0" x2="80" y2="0" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="0" y1="60" x2="0" y2="80" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="-60" y1="0" x2="-80" y2="0" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="42" y1="-42" x2="56" y2="-56" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="42" y1="42" x2="56" y2="56" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="-42" y1="42" x2="-56" y2="56" stroke="#f1c40f" stroke-width="5"/>
+    <line x1="-42" y1="-42" x2="-56" y2="-56" stroke="#f1c40f" stroke-width="5"/>
+  </g>
+  
+  <!-- Planta de tratamiento de agua -->
+  <rect x="450" y="450" width="100" height="50" fill="#3498db"/>
+  <rect x="470" y="430" width="60" height="20" fill="#bdc3c7"/>
+  <rect x="490" y="410" width="20" height="20" fill="#bdc3c7"/>
+  
+  <!-- Agua limpia saliendo -->
+  <path d="M550,475 Q570,475 570,490 T590,505" stroke="#3498db" stroke-width="5" fill="none"/>
+  <path d="M550,475 Q570,485 570,500 T590,520" stroke="#3498db" stroke-width="3" fill="none"/>
+</svg>

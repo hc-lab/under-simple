@@ -1,0 +1,778 @@
+/* Estilos para la página principal de minería */
+
+/* Estilos generales */
+.mining-page {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+.mining-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.mining-logo {
+  display: flex;
+  align-items: center;
+}
+
+.mining-logo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a3c6e;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.mining-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.mining-nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.mining-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a3c6e;
+  transition: width 0.3s;
+}
+
+.mining-nav-link:hover {
+  color: #1a3c6e;
+}
+
+.mining-nav-link:hover::after {
+  width: 100%;
+}
+
+.mining-nav-link.active {
+  color: #1a3c6e;
+}
+
+.mining-nav-link.active::after {
+  width: 100%;
+}
+
+.mining-login-button {
+  background-color: #1a3c6e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 2px solid #1a3c6e;
+}
+
+.mining-login-button:hover {
+  background-color: white;
+  color: #1a3c6e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.mining-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mining-hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.mining-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.mining-hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mining-hero-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1605131545453-1c458a5f4935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  animation: slowZoom 20s infinite alternate;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.mining-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mining-hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.mining-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.mining-hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mining-hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mining-hero-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mining-hero-button.primary {
+  background-color: #1a3c6e;
+  color: white;
+  border: 2px solid #1a3c6e;
+}
+
+.mining-hero-button.primary:hover {
+  background-color: #0f2a5c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mining-hero-button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.mining-hero-button.secondary:hover {
+  background-color: white;
+  color: #1a3c6e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección Noticias */
+.mining-news {
+  padding: 100px 40px;
+  background-color: #f8f9fa;
+}
+
+.mining-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.mining-section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a3c6e;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+.mining-section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a3c6e, #4a90e2);
+}
+
+.mining-section-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.mining-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mining-news-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mining-news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.mining-news-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mining-news-card-category {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #1a3c6e;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mining-news-card-content {
+  padding: 25px;
+}
+
+.mining-news-card-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.mining-news-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1a3c6e;
+  line-height: 1.3;
+}
+
+.mining-news-card-excerpt {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.mining-news-card-link {
+  display: inline-block;
+  color: #1a3c6e;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.mining-news-card-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a3c6e;
+  transition: width 0.3s;
+}
+
+.mining-news-card-link:hover::after {
+  width: 100%;
+}
+
+/* Sección Acerca de */
+.mining-about {
+  padding: 100px 40px;
+  background-color: white;
+}
+
+.mining-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mining-about-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mining-about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mining-about-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a3c6e;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.mining-about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a3c6e, #4a90e2);
+}
+
+.mining-about-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.mining-about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mining-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mining-stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a3c6e;
+  margin-bottom: 10px;
+}
+
+.mining-stat-label {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+}
+
+/* Sección Contacto */
+.mining-contact {
+  padding: 100px 40px;
+  background-color: #f8f9fa;
+}
+
+.mining-contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.mining-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mining-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.mining-contact-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #1a3c6e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mining-contact-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mining-contact-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a3c6e;
+  margin-bottom: 5px;
+}
+
+.mining-contact-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.mining-contact-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mining-form-group {
+  margin-bottom: 20px;
+}
+
+.mining-form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mining-form-group input,
+.mining-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.mining-form-group input:focus,
+.mining-form-group textarea:focus {
+  border-color: #1a3c6e;
+  outline: none;
+}
+
+.mining-submit-button {
+  background-color: #1a3c6e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mining-submit-button:hover {
+  background-color: #0f2a5c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.mining-footer {
+  background-color: #1a3c6e;
+  color: white;
+  padding: 80px 40px 0;
+}
+
+.mining-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.mining-footer-logo h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.mining-footer-logo p {
+  font-size: 16px;
+  opacity: 0.8;
+  max-width: 300px;
+}
+
+.mining-footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.mining-footer-links-column h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.mining-footer-links-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+}
+
+.mining-footer-links-column a {
+  display: block;
+  color: white;
+  opacity: 0.8;
+  margin-bottom: 15px;
+  transition: opacity 0.2s;
+}
+
+.mining-footer-links-column a:hover {
+  opacity: 1;
+}
+
+.mining-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.mining-social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.mining-social-link:hover {
+  background-color: white;
+  transform: translateY(-3px);
+}
+
+.mining-social-link:hover svg {
+  fill: #1a3c6e;
+}
+
+.mining-social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.mining-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mining-hero h1 {
+    font-size: 48px;
+  }
+  
+  .mining-hero p {
+    font-size: 20px;
+  }
+  
+  .mining-about-container,
+  .mining-contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .mining-about-image {
+    order: -1;
+  }
+  
+  .mining-footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mining-footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mining-header {
+    padding: 15px 20px;
+  }
+  
+  .mining-nav {
+    gap: 15px;
+  }
+  
+  .mining-hero {
+    padding: 0 20px;
+  }
+  
+  .mining-hero h1 {
+    font-size: 36px;
+  }
+  
+  .mining-hero p {
+    font-size: 18px;
+  }
+  
+  .mining-news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mining-footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mining-nav-link {
+    font-size: 14px;
+  }
+  
+  .mining-login-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .mining-hero-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .mining-about,
+  .mining-news,
+  .mining-contact {
+    padding: 60px 20px;
+  }
+}

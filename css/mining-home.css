@@ -121,7 +121,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0 40px; /* Volvemos al padding normal */
+  padding: 0 20px; /* Reducimos el padding para dar más espacio a la imagen */
   overflow: hidden;
   color: #333;
   text-align: center;
@@ -144,13 +144,20 @@
 
 /* Estilos para la estructura de dos columnas con línea divisoria */
 .hero-left, .hero-right {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   position: relative;
   z-index: 2;
+}
+
+.hero-left {
+  flex: 1.2; /* Reducimos la proporción para que no ocupe tanto espacio */
+}
+
+.hero-right {
+  flex: 1; /* Aumentamos la proporción para equilibrar mejor el espacio */
 }
 
 .hero-left {
@@ -166,7 +173,7 @@
   height: 70%;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7), transparent);
   position: relative;
-  margin: 0 20px;
+  margin: 0 10px; /* Reducimos el margen lateral para que no quede tan separada */
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   animation: pulseGlow 3s infinite alternate;
@@ -240,14 +247,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px; /* Espacio entre el navbar y la imagen */
+  margin-top: 0px; /* Reducimos el espacio entre el navbar y la imagen */
+  width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho disponible */
+  max-width: 1200px; /* Reducimos el ancho máximo para que no quede tan ancho */
+  margin-left: auto; /* Centramos el contenedor */
+  margin-right: auto; /* Centramos el contenedor */
   font-size: 0; /* Elimina cualquier espacio entre elementos inline */
   line-height: 0; /* Elimina cualquier espacio entre líneas */
 }
 
 /* Imagen del hero */
 .hero-image {
-  width: 480px; /* 320px + 50% = 480px */
+  width: 100%; /* Hacemos que la imagen ocupe todo el ancho disponible */
+  max-width: 600px; /* Reducimos el tamaño máximo para que no quede tan ancho */
   height: auto;
   border-radius: 0;
   border: none;
@@ -1329,7 +1341,7 @@
     flex-direction: column;
     height: auto;
     min-height: 100vh;
-    padding-top: 120px;
+    padding-top: 80px; /* Reducimos el padding superior */
     padding-bottom: 60px;
   }
 
@@ -1345,7 +1357,7 @@
 
   .hero-image {
     width: 100%;
-    max-width: 320px;
+    max-width: 500px; /* Aumentamos el tamaño máximo en tablets */
     margin: 0 auto 30px;
   }
 
@@ -1411,7 +1423,7 @@
   }
 
   .hero-image {
-    max-width: 280px;
+    max-width: 350px;
   }
 
   .project-card {

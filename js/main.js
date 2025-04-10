@@ -1,5 +1,36 @@
 // Efectos adicionales para mejorar la elegancia y profesionalidad
 document.addEventListener('DOMContentLoaded', function() {
+  // Función para cargar y mostrar imágenes dinámicas en los sliders
+  const initImageSliders = () => {
+    const sliders = document.querySelectorAll('.mining-image-slider');
+
+    sliders.forEach(slider => {
+      const folder = slider.getAttribute('data-folder');
+      let currentImageIndex = 1;
+      let maxImages = 4; // Valor predeterminado
+
+      // Establecer la primera imagen
+      slider.style.backgroundImage = `url('${folder}/(1).jpeg')`;
+      console.log(`Cargando imagen: ${folder}/(1).jpeg`);
+
+      // Determinar el número máximo de imágenes según la carpeta
+      if (folder.includes('Flor de Kantu')) maxImages = 4;
+      if (folder.includes('Guadalupe')) maxImages = 7;
+      if (folder.includes('Santamaria')) maxImages = 3;
+      if (folder.includes('Prosperidad')) maxImages = 1;
+
+      // Cambiar imágenes cada 3 segundos
+      if (maxImages > 1) {
+        setInterval(() => {
+          currentImageIndex = currentImageIndex % maxImages + 1;
+          slider.style.backgroundImage = `url('${folder}/(${currentImageIndex}).jpeg')`;
+        }, 3000);
+      }
+    });
+  };
+
+  // Inicializar los sliders de imágenes
+  initImageSliders();
   // Efecto de parallax suave en el scroll solo para elementos de fondo
   window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;

@@ -3,8 +3,8 @@
 /* Estilos generales */
 .mining-page {
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
-  background: linear-gradient(135deg, #585858 0%, #e4e8f0 100%);
+  color: #000000;
+  background: linear-gradient(135deg, #000000 0%, #00000059 100%);
   overflow-x: hidden;
 }
 
@@ -32,19 +32,19 @@
 }
 
 .mining-logo h1 {
-  font-size: 39px; /* Aumentado en 30% */
+  font-size: 27px; /* Reducido en 30% del tamaño original de 39px */
   font-weight: 800;
-  background: linear-gradient(90deg, #3c3c3c97, #333333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000; /* Negro puro sólido */
   margin: 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
   padding: 5px 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil para dar profundidad */
+  opacity: 0.9; /* Opacidad ajustada para elegancia */
 }
+
+/* Animación eliminada para el navbar */
 
 .mining-nav {
   display: flex;
@@ -121,13 +121,163 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0 40px;
+  padding: 0 40px; /* Volvemos al padding normal */
   overflow: hidden;
   color: #333;
   text-align: center;
   margin-bottom: 80px;
-  background-color: #f8f8f8; /* Fondo de respaldo */
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f5f5f5 100%);
+  position: relative;
 }
+
+.mining-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Estilos para la estructura de dos columnas con línea divisoria */
+.hero-left, .hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-left {
+  align-items: center; /* Volvemos a centrar verticalmente */
+  padding-top: 0;
+  margin-top: 0;
+  position: relative; /* Para posicionar elementos dentro */
+}
+
+/* Línea vertical divisoria */
+.vertical-line {
+  width: 2px;
+  height: 70%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7), transparent);
+  position: relative;
+  margin: 0 20px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: pulseGlow 3s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Detalles decorativos sobre la línea */
+.line-detail {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.line-detail.top {
+  top: 0;
+  animation: pulseDot 2s infinite alternate;
+}
+
+.line-detail.middle {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #000;
+  animation: rotateDot 6s linear infinite;
+}
+
+.line-detail.bottom {
+  bottom: 0;
+  animation: pulseDot 2s infinite alternate-reverse;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-50%) scale(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateDot {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px; /* Espacio entre el navbar y la imagen */
+  font-size: 0; /* Elimina cualquier espacio entre elementos inline */
+  line-height: 0; /* Elimina cualquier espacio entre líneas */
+}
+
+/* Imagen del hero */
+.hero-image {
+  width: 480px; /* 320px + 50% = 480px */
+  height: auto;
+  border-radius: 0;
+  border: none;
+  box-shadow: none; /* Eliminamos la sombra */
+  position: relative;
+  transition: all 0.5s ease;
+  animation: none; /* Eliminamos la animación de flotación */
+  filter: none; /* Eliminamos el filtro para mantener la transparencia original del PNG */
+  z-index: 1; /* Aseguramos que esté por encima del fondo */
+}
+
+/* Líneas elegantes arriba y abajo de la imagen */
+.elegant-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.7), transparent);
+  position: relative;
+  margin: 0; /* Sin margen para que esté pegada a la imagen */
+}
+
+/* Línea superior */
+.elegant-line.top {
+  margin-bottom: 0;
+}
+
+/* Línea inferior */
+.elegant-line.bottom {
+  margin-top: 0;
+}
+
 
 .mining-hero-video-container {
   position: absolute;
@@ -144,7 +294,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.9) contrast(0.9) saturate(0.8) opacity(0.7);
+  filter: brightness(0.9) contrast(0.9) saturate(0.8) opacity(0.5);
   transform: scale(1.02); /* Ligero zoom para evitar bordes */
 }
 
@@ -187,14 +337,83 @@
   z-index: 2;
   max-width: 800px;
   animation: fadeInUp 1.2s ease-out forwards;
-  background: rgba(140, 140, 140, 0.85); /* Aumentada la opacidad para mejor legibilidad */
+  background: transparent;
   padding: 50px;
-  border-radius: 20px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s ease;
+  text-align: left;
+}
+
+/* Elementos decorativos modernos para el hero */
+.mining-hero-content::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -100px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotateSlowly 20s linear infinite;
+}
+
+.mining-hero-content::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -80px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotateSlowly 15s linear infinite reverse;
+}
+
+/* Líneas estructurales decorativas */
+.mining-hero-content .hero-tagline::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mining-hero-content .hero-tagline::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mining-hero-content .hero-description {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.mining-hero-content .hero-description::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes rotateSlowly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeInUp {
@@ -213,7 +432,7 @@
   font-weight: 800;
   margin-bottom: 30px;
   line-height: 1.2;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   color: #000000;
   background: linear-gradient(90deg, #000000, #333333);
   -webkit-background-clip: text;
@@ -225,6 +444,48 @@
   position: relative;
   display: inline-block;
 }
+
+.mining-hero-content h1 {
+  font-size: 91px; /* Aumentado en 40% del tamaño original de 65px */
+  font-weight: 800;
+  margin-bottom: 15px;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Sombra sutil para dar profundidad */
+  position: relative;
+  opacity: 0.9; /* Opacidad ajustada para elegancia */
+  background: linear-gradient(90deg, #000000, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s infinite;
+  background-size: 200% 100%;
+}
+
+/* Estilo para el texto con degradado */
+.text-with-gradient {
+  background: linear-gradient(90deg, #000000, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s infinite;
+  background-size: 200% 100%;
+  font-size: 91px;
+}
+
+/* Estilo para el símbolo de diamante con el mismo color que UNDER */
+.diamond-same-color {
+  font-size: 50%;
+  vertical-align: middle;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Eliminadas las líneas estructurales en forma de L */
 
 @keyframes shimmer {
   0% {
@@ -265,7 +526,8 @@
   margin-bottom: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.7);
+  position: relative;
 }
 
 .mining-hero p.hero-description {
@@ -274,7 +536,7 @@
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.7);
   margin-bottom: 30px;
 }
 
@@ -350,11 +612,13 @@
 
 /* Sección Noticias */
 .mining-news {
-  padding: 100px 40px;
+  padding: 120px 40px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e4e8f0 100%);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .mining-news.visible {
@@ -362,23 +626,51 @@
   transform: translateY(0);
 }
 
+.mining-news::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%);
+  z-index: 0;
+}
+
+.mining-news::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%);
+  z-index: 0;
+}
+
 .mining-section-header {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+  max-width: 900px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .mining-section-header h2 {
-  font-size: 36px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #1a1a1a, #555555);
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #000000, #444444);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   display: inline-block;
+  letter-spacing: 1px;
 }
 
 .mining-section-header h2::after {
@@ -387,126 +679,192 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #1a1a1a, #555555);
+  background: linear-gradient(90deg, #000000, #444444);
+  border-radius: 2px;
 }
 
 .mining-section-header p {
-  font-size: 18px;
-  color: #666;
+  font-size: 20px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
 }
 
 .mining-news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.mining-news-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 10px;
+/* Estilos de tarjetas antiguas eliminados */
+
+/* Contenedor de tarjetas de proyectos */
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .project-cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .project-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilos para las nuevas tarjetas de proyectos */
+.project-card {
+  position: relative;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 400px;
+  background-color: #fff;
+  cursor: pointer;
+  animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
-  transform: translateY(30px);
+  width: 100%;
+  z-index: 1;
 }
 
-.mining-news-card.animated {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.mining-news-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  border-color: rgba(0, 0, 0, 0.1);
+.project-card-wrapper:hover .project-card {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.mining-news-card-image {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
+.project-card-image {
+  width: 100%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
-.mining-news-card-category {
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card-wrapper:hover .project-card-image img {
+  transform: scale(1.1);
+}
+
+.project-card-overlay {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  background: linear-gradient(135deg, #1a1a1a, #555555);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
 
-.mining-news-card-content {
-  padding: 25px;
+.project-card-wrapper:hover .project-card-overlay {
+  opacity: 0.85;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
 }
 
-.mining-news-card-date {
-  font-size: 14px;
-  color: #555555;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.mining-news-card-title {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  background: linear-gradient(90deg, #1a1a1a, #555555);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.3;
-}
-
-.mining-news-card-excerpt {
-  font-size: 16px;
-  background: linear-gradient(90deg, #555, #777);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.mining-news-card-link {
-  display: inline-block;
-  background: linear-gradient(90deg, #1a1a1a, #555555);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-  font-size: 16px;
-  position: relative;
-  padding-bottom: 5px;
-}
-
-.mining-news-card-link::after {
-  content: '';
+.project-card-title {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #333333;
-  transition: width 0.3s;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
 }
 
-.mining-news-card-link:hover::after {
+.project-card-title h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  padding: 15px 25px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 100%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 0;
+  display: block;
   width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  letter-spacing: 0.5px;
+  border-left: 3px solid #fff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
+
+.project-card-title h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.project-card-wrapper:hover .project-card-title h3 {
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.9) 100%);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+  border-left: 3px solid #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.project-card-wrapper:hover .project-card-title h3::before {
+  transform: translateX(100%);
+}
+
+.project-card-wrapper {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos antiguos eliminados */
+
+/* Más estilos antiguos eliminados */
 
 /* Sección Acerca de */
 .mining-about {
@@ -543,6 +901,32 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+.mining-team-caption {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #1a1a1a, #555555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.mining-team-caption::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1a1a1a, #555555);
 }
 
 .mining-about-content h2 {
@@ -925,14 +1309,44 @@
 @media (max-width: 768px) {
   .mining-header {
     padding: 15px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mining-logo {
+    margin-bottom: 10px;
   }
 
   .mining-nav {
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .mining-hero {
     padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 30px;
   }
 
   .mining-hero h1 {
@@ -943,8 +1357,23 @@
     font-size: 18px;
   }
 
-  .mining-news-grid {
+  .image-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .project-cards-container {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    height: 350px;
+  }
+
+  .project-card-title h3 {
+    font-size: 20px;
+    padding: 12px 15px;
   }
 
   .mining-footer-links {
@@ -971,5 +1400,26 @@
   .mining-news,
   .mining-contact {
     padding: 60px 20px;
+  }
+
+  .mining-hero h1 {
+    font-size: 30px;
+  }
+
+  .mining-hero p.hero-tagline {
+    font-size: 14px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+  }
+
+  .project-card {
+    height: 300px;
+  }
+
+  .project-card-title h3 {
+    font-size: 18px;
+    padding: 10px 15px;
   }
 }

@@ -1,0 +1,38 @@
+<!-- Navbar estático para la página principal -->
+<header class="mining-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+  <div class="mining-logo">
+    <h1 style="font-size: 28px; font-weight: 800; color: #000000; letter-spacing: 1px; margin: 0;">UNDER<span class="diamond-small" style="color: #000000;">◆</span></h1>
+  </div>
+  <nav class="mining-nav" style="display: flex; gap: 25px; align-items: center;">
+    <a href="index.html" class="mining-nav-link" style="color: #222222; text-decoration: none; font-weight: 600; font-size: 16px; padding: 5px 0; position: relative;">INICIO</a>
+    <a href="index.html#nosotros" class="mining-nav-link" style="color: #222222; text-decoration: none; font-weight: 600; font-size: 16px; padding: 5px 0; position: relative;">NOSOTROS</a>
+    <div class="dropdown" style="position: relative; display: inline-block;">
+      <a href="index.html#noticias" class="mining-nav-link dropdown-toggle" style="color: #222222; text-decoration: none; font-weight: 600; font-size: 16px; padding: 5px 0; position: relative; padding-right: 18px;">PROYECTOS</a>
+      <div class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: white; min-width: 200px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); border-radius: 4px; padding: 10px 0; z-index: 1001; margin-top: 10px;">
+        <a href="proyectos/flor-de-kantu.html" class="dropdown-item" style="display: block; color: #333; text-decoration: none; padding: 10px 20px; font-weight: 500; font-size: 14px; text-align: center;">FLOR DE KANTU</a>
+        <a href="proyectos/guadalupe.html" class="dropdown-item" style="display: block; color: #333; text-decoration: none; padding: 10px 20px; font-weight: 500; font-size: 14px; text-align: center;">GUADALUPE</a>
+        <a href="proyectos/santamaria.html" class="dropdown-item" style="display: block; color: #333; text-decoration: none; padding: 10px 20px; font-weight: 500; font-size: 14px; text-align: center;">SANTAMARIA</a>
+        <a href="proyectos/prosperidad.html" class="dropdown-item" style="display: block; color: #333; text-decoration: none; padding: 10px 20px; font-weight: 500; font-size: 14px; text-align: center;">PROSPERIDAD</a>
+      </div>
+    </div>
+    <a href="index.html#contacto" class="mining-nav-link" style="color: #222222; text-decoration: none; font-weight: 600; font-size: 16px; padding: 5px 0; position: relative;">CONTACTO</a>
+  </nav>
+</header>
+
+<!-- Script para el menú desplegable -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+    if (dropdown && dropdownMenu) {
+      dropdown.addEventListener('mouseenter', function() {
+        dropdownMenu.style.display = 'block';
+      });
+      
+      dropdown.addEventListener('mouseleave', function() {
+        dropdownMenu.style.display = 'none';
+      });
+    }
+  });
+</script>

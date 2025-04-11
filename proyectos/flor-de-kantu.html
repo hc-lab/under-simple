@@ -9,21 +9,30 @@
     <link rel="stylesheet" href="../css/mining-home.css">
     <link rel="stylesheet" href="../css/diamond-style.css">
     <link rel="stylesheet" href="../css/proyecto.css">
-    <link rel="stylesheet" href="../css/artistic-background.css">
+    <link rel="stylesheet" href="../css/proyecto-hero.css">
+    <link rel="stylesheet" href="../css/professional-navbar.css">
   </head>
   <body>
     <div id="root">
       <div class="mining-page">
-        <!-- Header -->
-        <header class="mining-header">
-          <div class="mining-logo">
+        <!-- Navbar profesional -->
+        <header class="pro-navbar">
+          <div class="pro-navbar-logo">
             <h1>UNDER<span class="diamond-small">◆</span></h1>
           </div>
-          <nav class="mining-nav">
-            <a href="../index.html" class="mining-nav-link">Inicio</a>
-            <a href="../index.html#nosotros" class="mining-nav-link">Nosotros</a>
-            <a href="../index.html#noticias" class="mining-nav-link active">Proyectos</a>
-            <a href="../index.html#contacto" class="mining-nav-link">Contacto</a>
+          <nav class="pro-navbar-nav">
+            <a href="../index.html" class="pro-nav-item">INICIO</a>
+            <a href="../index.html#nosotros" class="pro-nav-item">NOSOTROS</a>
+            <div class="pro-dropdown">
+              <a href="../index.html#noticias" class="pro-dropdown-toggle">PROYECTOS <span class="arrow"></span></a>
+              <div class="pro-dropdown-menu">
+                <a href="flor-de-kantu.html" class="pro-dropdown-item">FLOR DE KANTU</a>
+                <a href="guadalupe.html" class="pro-dropdown-item">GUADALUPE</a>
+                <a href="santamaria.html" class="pro-dropdown-item">SANTAMARIA</a>
+                <a href="prosperidad.html" class="pro-dropdown-item">PROSPERIDAD</a>
+              </div>
+            </div>
+            <a href="../index.html#contacto" class="pro-nav-item">CONTACTO</a>
           </nav>
         </header>
 
@@ -38,10 +47,7 @@
             <h1 class="text-with-gradient">FLOR DE KANTU</h1>
             <div class="elegant-line"></div>
             <p class="proyecto-description">
-              Nuestro emblemático proyecto minero ubicado en el corazón de los Andes peruanos,
-              donde combinamos tecnología de vanguardia con prácticas sostenibles para extraer
-              minerales de manera responsable, respetando el entorno natural y contribuyendo al
-              desarrollo de las comunidades locales.
+            La concesión minera Antamayo Cinco (1,000 ha), ubicada en Áncash, posee mineralización asociada a estructuras favorables y buenos valores metálicos. Su accesibilidad y excelente respuesta en flotación respaldan su viabilidad técnico-operativa.
             </p>
           </div>
           <div class="proyecto-hero-image">
@@ -102,13 +108,13 @@
           </div>
           <div class="proyecto-gallery-grid">
             <div class="proyecto-gallery-item">
-              <img src="../img/Flor de Kantu/(1).jpeg" alt="Imagen del proyecto Flor de Kantu">
+              <img src="../img/Flor-de-Kantu/1-1.jpg" alt="Imagen del proyecto Flor de Kantu">
             </div>
             <div class="proyecto-gallery-item">
-              <img src="../img/Flor de Kantu/(2).jpeg" alt="Imagen del proyecto Flor de Kantu">
+              <img src="../img/Flor-de-Kantu/(2).jpeg" alt="Imagen del proyecto Flor de Kantu">
             </div>
             <div class="proyecto-gallery-item">
-              <img src="../img/Flor de Kantu/(3).jpeg" alt="Imagen del proyecto Flor de Kantu">
+              <img src="../img/Flor-de-Kantu/(3).jpeg" alt="Imagen del proyecto Flor de Kantu">
             </div>
           </div>
         </section>
@@ -169,8 +175,13 @@
         </footer>
       </div>
     </div>
+    <!-- Script para la sección hero de proyectos -->
+    <script src="../js/proyecto-hero.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="../js/particles.js"></script>
     <script src="../js/main.js"></script>
+
+    <!-- Script para el navbar profesional -->
+    <script src="../js/professional-navbar.js"></script>
   </body>
 </html>

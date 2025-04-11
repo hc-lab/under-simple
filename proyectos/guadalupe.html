@@ -9,25 +9,40 @@
     <link rel="stylesheet" href="../css/mining-home.css">
     <link rel="stylesheet" href="../css/diamond-style.css">
     <link rel="stylesheet" href="../css/proyecto.css">
+    <link rel="stylesheet" href="../css/proyecto-hero.css">
+    <link rel="stylesheet" href="../css/professional-navbar.css">
   </head>
   <body>
     <div id="root">
       <div class="mining-page">
-        <!-- Header -->
-        <header class="mining-header">
-          <div class="mining-logo">
+        <!-- Navbar profesional -->
+        <header class="pro-navbar">
+          <div class="pro-navbar-logo">
             <h1>UNDER<span class="diamond-small">◆</span></h1>
           </div>
-          <nav class="mining-nav">
-            <a href="../index.html" class="mining-nav-link">Inicio</a>
-            <a href="../index.html#nosotros" class="mining-nav-link">Nosotros</a>
-            <a href="../index.html#noticias" class="mining-nav-link active">Proyectos</a>
-            <a href="../index.html#contacto" class="mining-nav-link">Contacto</a>
+          <nav class="pro-navbar-nav">
+            <a href="../index.html" class="pro-nav-item">INICIO</a>
+            <a href="../index.html#nosotros" class="pro-nav-item">NOSOTROS</a>
+            <div class="pro-dropdown">
+              <a href="../index.html#noticias" class="pro-dropdown-toggle">PROYECTOS <span class="arrow"></span></a>
+              <div class="pro-dropdown-menu">
+                <a href="flor-de-kantu.html" class="pro-dropdown-item">FLOR DE KANTU</a>
+                <a href="guadalupe.html" class="pro-dropdown-item">GUADALUPE</a>
+                <a href="santamaria.html" class="pro-dropdown-item">SANTAMARIA</a>
+                <a href="prosperidad.html" class="pro-dropdown-item">PROSPERIDAD</a>
+              </div>
+            </div>
+            <a href="../index.html#contacto" class="pro-nav-item">CONTACTO</a>
           </nav>
         </header>
 
         <!-- Proyecto Hero Section -->
         <section class="proyecto-hero">
+          <div class="artistic-side-image">
+            <!-- La imagen se aplica mediante CSS -->
+            <!-- Se ha reducido la opacidad y añadido una capa semitransparente para suavizar la intensidad de la imagen -->
+            <div class="frame"></div>
+          </div>
           <div class="proyecto-hero-content">
             <h1 class="text-with-gradient">Guadalupe</h1>
             <div class="elegant-line"></div>
@@ -39,7 +54,7 @@
             </p>
           </div>
           <div class="proyecto-hero-image">
-            <img src="../img/Cochapeti/1.jpeg" alt="Proyecto Guadalupe">
+            <img src="../img/Guadalupe/(1).jpeg" alt="Proyecto Guadalupe">
           </div>
         </section>
 
@@ -164,8 +179,13 @@
         </footer>
       </div>
     </div>
+    <!-- Script para la sección hero de proyectos -->
+    <script src="../js/proyecto-hero.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="../js/particles.js"></script>
     <script src="../js/main.js"></script>
+
+    <!-- Script para el navbar profesional -->
+    <script src="../js/professional-navbar.js"></script>
   </body>
 </html>

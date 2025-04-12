@@ -11,18 +11,85 @@
   overflow: hidden;
 }
 
+/* Efecto halftone que se desvanece gradualmente - Capa 1 (puntos grandes) */
+.proyecto-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #000 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 1;
+  mask-image: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.95) 50%, /* Mantiene 100% hasta el 50% */
+    rgba(0, 0, 0, 0.85) 55%, /* Comienza a desvanecer poco a poco */
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.5) 65%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.1) 75%,
+    rgba(0, 0, 0, 0) 80%); /* Completamente transparente en el 80% */
+  -webkit-mask-image: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.95) 50%,
+    rgba(0, 0, 0, 0.85) 55%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.5) 65%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.1) 75%,
+    rgba(0, 0, 0, 0) 80%);
+}
+
+/* Efecto halftone que se desvanece gradualmente - Capa 2 (puntos pequeños) */
+.proyecto-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #000 0.8px, transparent 0.8px);
+  background-size: 6px 6px;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 1;
+  mask-image: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.9) 50%, /* Mantiene 100% hasta el 50% */
+    rgba(0, 0, 0, 0.8) 55%, /* Comienza a desvanecer poco a poco */
+    rgba(0, 0, 0, 0.65) 60%,
+    rgba(0, 0, 0, 0.45) 65%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.1) 75%,
+    rgba(0, 0, 0, 0) 80%); /* Completamente transparente en el 80% */
+  -webkit-mask-image: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.8) 55%,
+    rgba(0, 0, 0, 0.65) 60%,
+    rgba(0, 0, 0, 0.45) 65%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.1) 75%,
+    rgba(0, 0, 0, 0) 80%);
+}
+
 /* Imagen artística lateral */
 .artistic-side-image {
   position: absolute;
   top: 0;
   left: 0;
-  width: 35%;
+  width: 50%; /* Exactamente el 50% de la página */
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.6; /* Opacidad reducida para que la imagen no sea tan intensa */
+  opacity: 0.9; /* Aumentada la opacidad para que se vea mejor */
   z-index: 0;
-  filter: brightness(0.9); /* Reduce el brillo para suavizar la intensidad */
+  filter: brightness(1); /* Brillo normal */
+  background-image: url('../img/Flor-de-Kantu/1-1.jpg'); /* Imagen específica para Flor de Kantu */
 }
 
 /* Capa adicional para suavizar la intensidad de la imagen */
@@ -33,21 +100,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4); /* Capa blanca semitransparente */
+  background-color: rgba(255, 255, 255, 0.2); /* Capa blanca más transparente */
   z-index: 1;
 }
 
-/* Efecto de marco para la imagen */
+/* Efecto de marco para la imagen - Desactivado para permitir el efecto halftone */
 .artistic-side-image .frame {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  z-index: 2;
-  pointer-events: none;
+  display: none;
 }
 
 /* Efecto de transición suave */
@@ -56,9 +115,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 100px;
+  width: 30%; /* Ancho del 30% para que comience en el 50% y termine en el 80% */
   height: 100%;
-  background: linear-gradient(to right, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1));
+  background: linear-gradient(to right,
+    rgba(249, 249, 249, 0) 0%, /* Completamente transparente al inicio (50% de la página) */
+    rgba(249, 249, 249, 0.1) 16%, /* 55% de la página */
+    rgba(249, 249, 249, 0.3) 33%, /* 60% de la página */
+    rgba(249, 249, 249, 0.5) 50%, /* 65% de la página */
+    rgba(249, 249, 249, 0.7) 66%, /* 70% de la página */
+    rgba(249, 249, 249, 0.9) 83%, /* 75% de la página */
+    rgba(249, 249, 249, 1) 100%); /* Completamente opaco al final (80% de la página) */
   z-index: 3;
 }
 
@@ -66,12 +132,14 @@
 .proyecto-hero-content {
   grid-column: 2;
   padding: 30px;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.8);
+  z-index: 4; /* Aumentado para que esté por encima de todos los efectos */
+  background: rgba(255, 255, 255, 0.95); /* Más opaco para mejor legibilidad */
   border-radius: 4px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   min-width: auto;
   flex: none;
+  margin-left: 30px; /* Añadido margen para separarlo del borde */
+  position: relative; /* Para asegurar que esté por encima */
 }
 
 .proyecto-hero-content h1 {
@@ -121,11 +189,60 @@
 /* Estilos responsivos */
 @media (max-width: 1200px) {
   .artistic-side-image {
-    width: 30%;
+    width: 50%; /* Exactamente el 50% */
   }
-  
+
   .proyecto-hero-image {
     margin-left: 20%;
+  }
+
+  /* Ajustamos el efecto halftone */
+  .proyecto-hero::before {
+    background-size: 9px 9px;
+    mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.95) 50%,
+      rgba(0, 0, 0, 0.85) 55%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.5) 65%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.95) 50%,
+      rgba(0, 0, 0, 0.85) 55%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.5) 65%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+  }
+
+  .proyecto-hero::after {
+    background-size: 5px 5px;
+    mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 50%,
+      rgba(0, 0, 0, 0.8) 55%,
+      rgba(0, 0, 0, 0.65) 60%,
+      rgba(0, 0, 0, 0.45) 65%,
+      rgba(0, 0, 0, 0.25) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 50%,
+      rgba(0, 0, 0, 0.8) 55%,
+      rgba(0, 0, 0, 0.65) 60%,
+      rgba(0, 0, 0, 0.45) 65%,
+      rgba(0, 0, 0, 0.25) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+  }
+
+  .artistic-side-image::after {
+    width: 30%;
   }
 }
 
@@ -134,30 +251,81 @@
     grid-template-columns: 1fr;
     padding: 100px 40px 60px;
   }
-  
+
   .artistic-side-image {
     width: 100%;
     height: 300px;
-    opacity: 0.2;
+    opacity: 0.3; /* Un poco más visible */
   }
-  
+
   .artistic-side-image::after {
-    display: none;
+    width: 100%;
+    background: linear-gradient(to right,
+      rgba(249, 249, 249, 0) 0%,
+      rgba(249, 249, 249, 0.3) 30%,
+      rgba(249, 249, 249, 0.6) 60%,
+      rgba(249, 249, 249, 0.9) 100%);
   }
-  
+
   .proyecto-hero-content {
     grid-column: 1;
     grid-row: 2;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
     margin-top: 20px;
+    margin-left: 0;
   }
-  
+
   .proyecto-hero-image {
     grid-column: 1;
     grid-row: 1;
     margin-left: 0;
     margin-top: 50px;
+  }
+
+  /* Ajustamos el efecto halftone */
+  .proyecto-hero::before {
+    background-size: 8px 8px;
+    mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 50%,
+      rgba(0, 0, 0, 0.8) 55%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.4) 65%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.9) 50%,
+      rgba(0, 0, 0, 0.8) 55%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.4) 65%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+  }
+
+  .proyecto-hero::after {
+    background-size: 4px 4px;
+    mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.7) 55%,
+      rgba(0, 0, 0, 0.5) 60%,
+      rgba(0, 0, 0, 0.3) 65%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
+    -webkit-mask-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.7) 55%,
+      rgba(0, 0, 0, 0.5) 60%,
+      rgba(0, 0, 0, 0.3) 65%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 80%);
   }
 }
 
@@ -165,16 +333,49 @@
   .proyecto-hero {
     padding: 80px 20px 40px;
   }
-  
+
   .artistic-side-image {
     height: 200px;
   }
-  
+
   .proyecto-hero-content h1 {
     font-size: 32px;
   }
-  
+
   .proyecto-description {
     font-size: 15px;
+  }
+
+  /* Ajustamos el efecto halftone */
+  .proyecto-hero::before {
+    background-size: 7px 7px;
+    opacity: 0.12;
+  }
+
+  .proyecto-hero::after {
+    background-size: 3.5px 3.5px;
+    opacity: 0.08;
+  }
+}
+
+/* Para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .proyecto-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .proyecto-description {
+    font-size: 14px;
+  }
+
+  /* Ajustamos el efecto halftone */
+  .proyecto-hero::before {
+    background-size: 6px 6px;
+    opacity: 0.1;
+  }
+
+  .proyecto-hero::after {
+    background-size: 3px 3px;
+    opacity: 0.07;
   }
 }

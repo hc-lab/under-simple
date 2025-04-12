@@ -249,11 +249,12 @@
   align-items: center;
   margin-top: 0px; /* Reducimos el espacio entre el navbar y la imagen */
   width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho disponible */
-  max-width: 1200px; /* Reducimos el ancho máximo para que no quede tan ancho */
+  max-width: 600px; /* Ajustamos el ancho máximo para que coincida con la imagen */
   margin-left: auto; /* Centramos el contenedor */
   margin-right: auto; /* Centramos el contenedor */
   font-size: 0; /* Elimina cualquier espacio entre elementos inline */
   line-height: 0; /* Elimina cualquier espacio entre líneas */
+  overflow: hidden; /* Para que el overlay no se salga */
 }
 
 /* Imagen del hero */
@@ -269,6 +270,25 @@
   animation: none; /* Eliminamos la animación de flotación */
   filter: none; /* Eliminamos el filtro para mantener la transparencia original del PNG */
   z-index: 1; /* Aseguramos que esté por encima del fondo */
+}
+
+/* Overlay con gradiente elegante de izquierda a derecha */
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.15) 80%,
+    rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Líneas elegantes arriba y abajo de la imagen */

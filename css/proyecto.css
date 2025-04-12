@@ -49,24 +49,64 @@
 
 /* Sección de características */
 .proyecto-features {
-  padding: 80px 40px;
+  padding: 100px 40px;
   background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.proyecto-features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #000 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  opacity: 0.03;
+  pointer-events: none;
 }
 
 .proyecto-section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+  position: relative;
 }
 
 .proyecto-section-header h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 800;
   color: #000;
   margin-bottom: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.proyecto-section-header h2::before,
+.proyecto-section-header h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-section-header h2::before {
+  left: -60px;
+}
+
+.proyecto-section-header h2::after {
+  right: -60px;
 }
 
 .proyecto-section-header .elegant-line {
-  margin: 20px auto;
+  margin: 25px auto;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), #000000, rgba(0, 0, 0, 0.1));
 }
 
 .proyecto-features-grid {
@@ -79,46 +119,101 @@
 
 .proyecto-feature {
   background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .proyecto-feature:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+  border-color: rgba(0, 0, 0, 0.05);
 }
 
 .proyecto-feature-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #f8f8f8, #e6e6e6);
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .proyecto-feature-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.proyecto-feature:hover .proyecto-feature-icon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e8e8e8, #d8d8d8);
+}
+
+.proyecto-feature:hover .proyecto-feature-icon svg {
+  transform: scale(1.1);
+  color: #000;
 }
 
 .proyecto-feature h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   color: #000;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.proyecto-feature h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #000000, #555555);
+  transition: width 0.3s ease;
+}
+
+.proyecto-feature:hover h3 {
+  color: #111;
+}
+
+.proyecto-feature:hover h3::after {
+  width: 60px;
 }
 
 .proyecto-feature p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
+  text-align: justify;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  transition: color 0.3s ease;
+  flex-grow: 1;
+  hyphens: auto;
+}
+
+.proyecto-feature:hover p {
+  color: #444;
 }
 
 /* Galería de imágenes */
@@ -213,6 +308,30 @@
 
   .proyecto-features-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .proyecto-section-header h2::before,
+  .proyecto-section-header h2::after {
+    width: 30px;
+  }
+
+  .proyecto-section-header h2::before {
+    left: -40px;
+  }
+
+  .proyecto-section-header h2::after {
+    right: -40px;
+  }
+
+  .proyecto-feature {
+    padding: 30px 25px;
+  }
+
+  .proyecto-feature h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
   }
 
   .proyecto-gallery-grid {

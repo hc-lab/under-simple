@@ -725,9 +725,14 @@
   font-size: 20px;
   color: #444;
   line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1000px; /* Aumentado de 800px a 1000px para dar más espacio al texto */
+  margin: 0 auto 15px; /* Añadido margen inferior para separar los párrafos */
   font-weight: 400;
+}
+
+/* El último párrafo no necesita margen inferior */
+.mining-section-header p:last-child {
+  margin-bottom: 30px; /* Margen inferior para separar del contenido siguiente */
 }
 
 .mining-news-grid {

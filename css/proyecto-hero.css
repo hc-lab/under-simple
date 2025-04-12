@@ -89,7 +89,24 @@
   opacity: 0.9; /* Aumentada la opacidad para que se vea mejor */
   z-index: 0;
   filter: brightness(1); /* Brillo normal */
-  background-image: url('../img/Flor-de-Kantu/1-1.jpg'); /* Imagen específica para Flor de Kantu */
+  /* La imagen de fondo se define en clases específicas para cada proyecto */
+}
+
+/* Imágenes específicas para cada proyecto */
+.proyecto-flor-de-kantu .artistic-side-image {
+  background-image: url('../img/Flor-de-Kantu/1-1.jpg');
+}
+
+.proyecto-guadalupe .artistic-side-image {
+  background-image: url('../img/Guadalupe/1.jpg');
+}
+
+.proyecto-santamaria .artistic-side-image {
+  background-image: url('../img/Santamaria/4.jpeg?v=1');
+}
+
+.proyecto-prosperidad .artistic-side-image {
+  background-image: url('../img/Prosperidad/1.jpg');
 }
 
 /* Capa adicional para suavizar la intensidad de la imagen */

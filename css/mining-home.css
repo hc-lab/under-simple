@@ -1128,9 +1128,9 @@
 .mining-contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 .mining-contact-info {
@@ -1139,15 +1139,39 @@
   gap: 30px;
 }
 
+/* Estilo para la información de contacto centrada */
+.centered-contact-info {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 .mining-contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 20px 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.mining-contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .mining-contact-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #1a1a1a, #555555);
   border-radius: 50%;
   display: flex;
@@ -1155,21 +1179,42 @@
   justify-content: center;
   color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.mining-contact-item:hover .mining-contact-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #000000, #444444);
 }
 
 .mining-contact-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
+}
+
+.mining-contact-item:hover .mining-contact-icon svg {
+  transform: scale(1.1);
 }
 
 .mining-contact-item h3 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
   background: linear-gradient(90deg, #1a1a1a, #555555);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.mining-contact-item:hover h3 {
+  background: linear-gradient(90deg, #000000, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .mining-contact-item p {
@@ -1178,62 +1223,43 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: all 0.3s ease;
 }
 
-.mining-contact-form {
-  background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.mining-contact-item:hover p {
+  background: linear-gradient(90deg, #333, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.mining-form-group {
-  margin-bottom: 20px;
-}
+/* Estilos del formulario de contacto eliminados */
 
-.mining-form-group label {
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  color: #555555;
-  margin-bottom: 10px;
-}
+/* Ajustes responsivos para la sección de contacto */
+@media (max-width: 768px) {
+  .centered-contact-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
 
-.mining-form-group input,
-.mining-form-group textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
+  .mining-contact-item {
+    padding: 15px;
+  }
 
-.mining-form-group input:focus,
-.mining-form-group textarea:focus {
-  border-color: #333333;
-  outline: none;
-}
+  .mining-contact-icon {
+    width: 50px;
+    height: 50px;
+  }
 
-.mining-submit-button {
-  background: linear-gradient(135deg, #1a1a1a, #555555);
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+  .mining-contact-icon svg {
+    width: 24px;
+    height: 24px;
+  }
 
-.mining-submit-button:hover {
-  background: linear-gradient(135deg, #000000, #444444);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  .mining-contact-item h3 {
+    font-size: 20px;
+  }
 }
 
 /* Footer */

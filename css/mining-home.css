@@ -728,6 +728,7 @@
   max-width: 1000px; /* Aumentado de 800px a 1000px para dar más espacio al texto */
   margin: 0 auto 15px; /* Añadido margen inferior para separar los párrafos */
   font-weight: 400;
+  text-align: justify; /* Texto justificado para mejor ordenación */
 }
 
 /* El último párrafo no necesita margen inferior */

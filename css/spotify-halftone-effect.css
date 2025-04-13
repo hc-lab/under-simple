@@ -26,16 +26,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%; /* Reducido de 100% a 70% para que no se vea tan ancha */
+  width: 100%; /* Cambiado a 100% para rellenar la pantalla completa */
   height: 100%;
-  object-fit: cover; /* Corregido: eliminada la 'x' que desactivaba esta propiedad */
-  object-position: 0 center; /* Valor absoluto para asegurar que esté pegado a la izquierda */
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+  object-position: center center; /* Centrado para mejor visualización */
   opacity: 0.8;
   z-index: 1;
-  padding-left: 0; /* Sin padding para que esté pegado a la izquierda */
-  max-width: 70%; /* Reducido para limitar el ancho máximo */
-  transform-origin: left center; /* Establece el origen de transformación en el lado izquierdo */
-  margin-left: 0; /* Asegura que no haya margen a la izquierda */
+  padding: 0; /* Sin padding */
+  max-width: 100%; /* Cambiado a 100% para permitir ancho completo */
+  transform-origin: center center; /* Origen de transformación centrado */
+  margin: 0; /* Sin márgenes */
   transform: translateX(0); /* Evita cualquier transformación que pueda moverla */
 }
 
@@ -336,22 +336,22 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Alineado a la derecha */
+  align-items: flex-start; /* Cambiado a alineado a la izquierda */
   justify-content: center;
-  text-align: right; /* Texto alineado a la derecha */
-  padding: 0 2% 0 0; /* Reducido aún más el padding */
+  text-align: left; /* Cambiado a texto alineado a la izquierda */
+  padding: 0 0 0 2%; /* Ajustado padding para el lado izquierdo */
   max-width: 1200px;
-  margin: 0 0 0 auto; /* Pegado a la derecha */
-  width: 60%; /* Aumentado ligeramente para moverlo hacia la izquierda */
-  right: 0; /* Pegado al borde derecho */
-  transform: translateY(-10%); /* Mover hacia arriba un 10% */
+  margin: 0 auto 0 0; /* Pegado a la izquierda */
+  width: 60%; /* Mantenido el ancho */
+  left: 0; /* Pegado al borde izquierdo */
+  transform: translateY(-60%); /* Movido hacia arriba un 20% adicional (de -40% a -60%) */
 }
 
 /* Título principal */
 .hero-title {
-  font-size: 90px; /* Tamaño más grande */
+  font-size: 117px; /* Aumentado un 30% (90px * 1.3 = 117px) */
   font-weight: 800;
-  margin: 0 0 20px;
+  margin: 0 0 5px; /* Reducido el margen inferior de 10px a 5px */
   letter-spacing: 2px;
   position: relative;
   display: inline-block;
@@ -394,7 +394,7 @@
   font-size: 24px;
   font-weight: 500;
   color: #333333; /* Color oscuro para el texto */
-  margin: 0 0 40px;
+  margin: 0 0 15px; /* Reducido el margen inferior de 20px a 15px */
   letter-spacing: 1px;
   text-shadow: none;
   max-width: 800px;
@@ -506,13 +506,13 @@
   }
 
   .hero-title {
-    font-size: 80px;
+    font-size: 104px; /* Aumentado un 30% (80px * 1.3 = 104px) */
   }
 }
 
 @media (max-width: 1200px) {
   .hero-title {
-    font-size: 70px;
+    font-size: 91px; /* Aumentado un 30% (70px * 1.3 = 91px) */
   }
 
   .hero-spotify-effect {
@@ -521,14 +521,14 @@
 
   /* Ajuste para monitores Mac de 24 pulgadas */
   .hero-content {
-    padding-right: 3%; /* Reducido para mover más a la derecha */
+    padding-left: 3%; /* Ajustado para el lado izquierdo */
   }
 }
 
 /* Ajuste específico para laptops y monitores de tamaño medio */
 @media (min-width: 1024px) and (max-width: 1440px) {
   .hero-content {
-    padding-right: 2%; /* Aún más cerca del borde derecho */
+    padding-left: 2%; /* Ajustado para el lado izquierdo */
   }
 }
 
@@ -541,7 +541,7 @@
 
 @media (max-width: 992px) {
   .hero-title {
-    font-size: 60px;
+    font-size: 78px; /* Aumentado un 30% (60px * 1.3 = 78px) */
   }
 
   .hero-tagline {
@@ -555,7 +555,7 @@
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 60px;
+    font-size: 78px; /* Aumentado un 30% (60px * 1.3 = 78px) */
   }
 
   .hero-tagline {
@@ -568,18 +568,18 @@
   }
 
   .hero-content {
-    padding: 0 2% 0 0;
-    align-items: flex-end;
-    text-align: right;
+    padding: 0 0 0 2%;
+    align-items: flex-start;
+    text-align: left;
     width: 70%; /* Ajustado para tablets */
-    transform: translateY(-10%); /* Mantener el desplazamiento hacia arriba */
+    transform: translateY(-60%); /* Mantener el desplazamiento hacia arriba */
   }
 
   .hero-background {
-    max-width: 70%; /* Ajustado para mantener consistencia */
-    width: 70%; /* Ajustado para mantener consistencia */
-    padding-left: 0;
-    object-position: 0% center; /* Mantiene pegado a la izquierda en móviles */
+    max-width: 100%; /* Ajustado para pantalla completa */
+    width: 100%; /* Ajustado para pantalla completa */
+    padding: 0;
+    object-position: center center; /* Centrado en móviles */
   }
 
   /* Ajustes para tablets */
@@ -603,32 +603,32 @@
 /* Media queries específicas para pantallas grandes, incluidos Mac de 24" */
 @media (min-width: 1200px) {
   .hero-background {
-    object-position: 0 center; /* Valor absoluto para asegurar que esté pegado a la izquierda */
+    object-position: center center; /* Centrado */
     left: 0;
-    margin-left: 0;
+    margin: 0;
     transform: translateX(0); /* Evita cualquier transformación que pueda moverla */
-    max-width: 70%; /* Mantener consistencia con el cambio principal */
-    width: 70%; /* Mantener consistencia con el cambio principal */
+    max-width: 100%; /* Pantalla completa */
+    width: 100%; /* Pantalla completa */
   }
 }
 
 /* Media query específica para pantallas muy grandes */
 @media (min-width: 1920px) {
   .hero-background {
-    object-position: 0 center;
+    object-position: center center;
     left: 0;
-    margin-left: 0;
+    margin: 0;
     transform: translateX(0); /* Evita cualquier transformación que pueda moverla */
-    max-width: 70%; /* Mantener consistencia con el cambio principal */
-    width: 70%; /* Mantener consistencia con el cambio principal */
-    padding-left: 0;
+    max-width: 100%; /* Pantalla completa */
+    width: 100%; /* Pantalla completa */
+    padding: 0;
     opacity: 0.5;
   }
 }
 
 @media (max-width: 576px) {
   .hero-title {
-    font-size: 48px;
+    font-size: 62px; /* Aumentado un 30% (48px * 1.3 = 62px) */
   }
 
   .hero-tagline {
@@ -642,22 +642,24 @@
   }
 
   .hero-content {
-    padding: 0 20px 0 0;
-    text-align: right;
-    align-items: flex-end;
+    padding: 0 0 0 20px;
+    text-align: left;
+    align-items: flex-start;
     width: 100%; /* Vuelve a ocupar todo el ancho en móviles */
     margin: 0 auto; /* Centrado en móviles */
-    transform: translateY(-5%); /* Reducido para móviles */
+    transform: translateY(-55%); /* Reducido para móviles pero manteniendo el desplazamiento hacia arriba */
   }
 
   .hero-background {
     max-width: 100%;
-    padding-left: 0;
+    width: 100%;
+    padding: 0;
     opacity: 0.5;
+    object-position: center center;
   }
 
   .hero-buttons {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   /* Ajustes para móviles */
@@ -680,7 +682,7 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 42px;
+    font-size: 55px; /* Aumentado un 30% (42px * 1.3 = 55px) */
   }
 
   .hero-tagline {
@@ -710,12 +712,12 @@
   }
 
   .hero-content {
-    padding: 0 15px 0 0;
-    text-align: right;
-    align-items: flex-end;
+    padding: 0 0 0 15px;
+    text-align: left;
+    align-items: flex-start;
     width: 100%;
     margin: 0 auto;
-    transform: translateY(-5%); /* Mantener el desplazamiento hacia arriba */
+    transform: translateY(-55%); /* Mantener el desplazamiento hacia arriba */
   }
 
   .mining-hero-button {
@@ -727,7 +729,7 @@
 /* Para dispositivos muy pequeños */
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 36px;
+    font-size: 47px; /* Aumentado un 30% (36px * 1.3 = 47px) */
   }
 
   .hero-tagline {

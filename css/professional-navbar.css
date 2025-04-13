@@ -30,6 +30,7 @@
   letter-spacing: 1px;
   margin: 0;
   transition: all 0.3s ease;
+  display: none; /* Ocultar el texto UNDER◆ en el navbar */
 }
 
 .pro-navbar-logo .diamond-small {
@@ -230,24 +231,24 @@
     padding: 0 20px;
     height: 70px;
   }
-  
+
   .pro-navbar-nav {
     gap: 20px;
   }
-  
+
   .pro-nav-item, .pro-dropdown-toggle {
     font-size: 15px;
     padding: 25px 0;
   }
-  
+
   .pro-nav-item::after, .pro-dropdown-toggle::after {
     bottom: 20px;
   }
-  
+
   .pro-dropdown-menu {
     min-width: 200px;
   }
-  
+
   .pro-dropdown-item {
     padding: 10px 15px;
     font-size: 14px;
@@ -259,40 +260,40 @@
     padding: 0 15px;
     height: 60px;
   }
-  
+
   .pro-navbar-logo h1 {
     font-size: 24px;
   }
-  
+
   .pro-navbar-nav {
     gap: 15px;
   }
-  
+
   .pro-nav-item, .pro-dropdown-toggle {
     font-size: 14px;
     padding: 20px 0;
   }
-  
+
   .pro-nav-item::after, .pro-dropdown-toggle::after {
     bottom: 15px;
   }
-  
+
   .pro-dropdown-menu {
     min-width: 180px;
     left: auto;
     right: 0;
     transform: translateX(0) translateY(10px) scale(0.95);
   }
-  
+
   .pro-dropdown:hover .pro-dropdown-menu {
     transform: translateX(0) translateY(0) scale(1);
   }
-  
+
   .pro-dropdown-menu::before {
     left: auto;
     right: 20px;
   }
-  
+
   .pro-dropdown-item {
     padding: 8px 12px;
     font-size: 13px;

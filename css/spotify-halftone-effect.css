@@ -8,7 +8,7 @@
   border-radius: 0;
   margin-top: 80px; /* Espacio para el navbar */
   padding: 0;
-  background: linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #d0d0d0 75%, #000000 100%);
+  background: #ffffff; /* Eliminado el degradado */
   height: 100vh; /* Altura completa de la ventana */
   min-height: 600px; /* Altura mínima para pantallas pequeñas */
   display: flex;
@@ -26,14 +26,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 70%; /* Reducido de 100% a 70% para que no se vea tan ancha */
   height: 100%;
-  object-fit: contain;
-  object-position: left center;
+  object-fit: cover; /* Corregido: eliminada la 'x' que desactivaba esta propiedad */
+  object-position: 0 center; /* Valor absoluto para asegurar que esté pegado a la izquierda */
   opacity: 0.8;
   z-index: 1;
-  padding-left: 5%;
-  max-width: 80%;
+  padding-left: 0; /* Sin padding para que esté pegado a la izquierda */
+  max-width: 70%; /* Reducido para limitar el ancho máximo */
+  transform-origin: left center; /* Establece el origen de transformación en el lado izquierdo */
+  margin-left: 0; /* Asegura que no haya margen a la izquierda */
+  transform: translateX(0); /* Evita cualquier transformación que pueda moverla */
 }
 
 /* Capa de puntos halftone con tamaño variable */
@@ -189,26 +192,16 @@
     rgba(0, 0, 0, 0) 100%);
 }
 
-/* Gradiente oscuro a claro de izquierda a derecha */
+/* Gradiente oscuro a claro de izquierda a derecha - Eliminado */
 .gradient-overlay {
+  display: none; /* Ocultamos completamente este elemento */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,
-    rgba(255, 255, 255, 0) 0%, /* Transparente en el lado izquierdo */
-    rgba(255, 255, 255, 0) 40%, /* Mantiene transparencia hasta el 40% */
-    rgba(255, 255, 255, 0.1) 45%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0.5) 55%,
-    rgba(255, 255, 255, 0.7) 60%,
-    rgba(255, 255, 255, 0.9) 70%,
-    rgba(255, 255, 255, 1) 80%, /* Completamente blanco a partir del 80% */
-    rgba(255, 255, 255, 1) 100%);
   z-index: 5;
   pointer-events: none;
-  mix-blend-mode: screen;
 }
 
 /* Efecto de duotono */
@@ -583,8 +576,10 @@
   }
 
   .hero-background {
-    max-width: 90%;
+    max-width: 70%; /* Ajustado para mantener consistencia */
+    width: 70%; /* Ajustado para mantener consistencia */
     padding-left: 0;
+    object-position: 0% center; /* Mantiene pegado a la izquierda en móviles */
   }
 
   /* Ajustes para tablets */
@@ -602,6 +597,32 @@
 
   .halftone-tiny {
     background-size: 2.5px 2.5px;
+  }
+}
+
+/* Media queries específicas para pantallas grandes, incluidos Mac de 24" */
+@media (min-width: 1200px) {
+  .hero-background {
+    object-position: 0 center; /* Valor absoluto para asegurar que esté pegado a la izquierda */
+    left: 0;
+    margin-left: 0;
+    transform: translateX(0); /* Evita cualquier transformación que pueda moverla */
+    max-width: 70%; /* Mantener consistencia con el cambio principal */
+    width: 70%; /* Mantener consistencia con el cambio principal */
+  }
+}
+
+/* Media query específica para pantallas muy grandes */
+@media (min-width: 1920px) {
+  .hero-background {
+    object-position: 0 center;
+    left: 0;
+    margin-left: 0;
+    transform: translateX(0); /* Evita cualquier transformación que pueda moverla */
+    max-width: 70%; /* Mantener consistencia con el cambio principal */
+    width: 70%; /* Mantener consistencia con el cambio principal */
+    padding-left: 0;
+    opacity: 0.5;
   }
 }
 

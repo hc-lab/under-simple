@@ -1,0 +1,17 @@
+/* CSS para ocultar efectos halftone e imágenes de fondo en páginas de proyectos */
+
+/* Ocultar el efecto halftone (pseudo-elementos ::before y ::after) */
+.proyecto-hero::before,
+.proyecto-hero::after {
+  display: none !important;
+}
+
+/* Ocultar la imagen artística lateral */
+.artistic-side-image {
+  display: none !important;
+}
+
+/* Ajustar el fondo de la sección hero */
+.proyecto-hero {
+  background: #ffffff !important; /* Fondo blanco sólido */
+}

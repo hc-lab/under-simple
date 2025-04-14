@@ -1,17 +1,76 @@
-x /* CSS para ocultar efectos halftone e imágenes de fondo en páginas de proyectos */
+/* CSS para ocultar efectos halftone e imágenes de fondo en páginas de proyectos */
 
 /* Ocultar el efecto halftone (pseudo-elementos ::before y ::after) */
 .proyecto-hero::before,
 .proyecto-hero::after {
   display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background-image: none !important;
 }
 
 /* Ocultar la imagen artística lateral */
-.artistic-side-image {
+.artistic-side-image,
+.artistic-side-image::before,
+.artistic-side-image::after,
+.artistic-side-image .frame {
   display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 /* Ajustar el fondo de la sección hero */
 .proyecto-hero {
   background: #ffffff !important; /* Fondo blanco sólido */
+}
+
+/* Asegurarse de que no haya efectos halftone en media queries */
+@media (max-width: 1200px) {
+  .proyecto-hero::before,
+  .proyecto-hero::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .proyecto-hero::before,
+  .proyecto-hero::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyecto-hero::before,
+  .proyecto-hero::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .proyecto-hero::before,
+  .proyecto-hero::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyecto-hero::before,
+  .proyecto-hero::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background-image: none !important;
+  }
 }

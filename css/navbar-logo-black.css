@@ -1,0 +1,78 @@
+/* Estilo para el logo del navbar en color negro */
+
+.pro-navbar-logo h1 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+  font-size: 28px !important;
+  margin: 0 !important;
+  letter-spacing: 1px !important;
+  text-decoration: none !important;
+  display: block !important; /* Forzar que se muestre */
+  visibility: visible !important; /* Asegurar visibilidad */
+}
+
+.pro-navbar-logo h1 .diamond-small {
+  color: #000000 !important;
+  font-size: 0.8em !important;
+  vertical-align: middle !important;
+  margin-left: 4px !important;
+  /* Forzar color negro sin herencia */
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+  text-fill-color: #000000 !important;
+}
+
+/* Asegurar que el logo sea visible en todas las situaciones */
+.pro-navbar-logo {
+  z-index: 1000 !important;
+}
+
+/* Hover effect para el logo */
+.pro-navbar-logo h1:hover {
+  color: #333333 !important;
+  transition: color 0.3s ease !important;
+}
+
+.pro-navbar-logo h1:hover .diamond-small {
+  color: #333333 !important;
+  transition: color 0.3s ease !important;
+  /* Forzar color gris en hover sin herencia */
+  background: none !important;
+  -webkit-text-fill-color: #333333 !important;
+  text-fill-color: #333333 !important;
+}
+
+/* Responsive para el logo */
+@media (max-width: 768px) {
+  .pro-navbar-logo h1 {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pro-navbar-logo h1 {
+    font-size: 22px !important;
+  }
+}
+
+/* Regla específica adicional para forzar color negro en el diamante */
+.pro-navbar .pro-navbar-logo h1 .diamond-small,
+.pro-navbar-logo .diamond-small,
+h1 .diamond-small {
+  color: #000000 !important;
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+  text-fill-color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Hover específico para el diamante */
+.pro-navbar .pro-navbar-logo h1:hover .diamond-small,
+.pro-navbar-logo h1:hover .diamond-small,
+h1:hover .diamond-small {
+  color: #333333 !important;
+  background: none !important;
+  -webkit-text-fill-color: #333333 !important;
+  text-fill-color: #333333 !important;
+  opacity: 1 !important;
+}

@@ -30,7 +30,7 @@ class HeroCarousel {
   }
   
   createIndicators() {
-    const heroSection = document.querySelector('.hero-spotify-effect');
+    const heroSection = document.querySelector('.hero-section');
     const indicatorsContainer = document.createElement('div');
     indicatorsContainer.className = 'carousel-indicators';
     
@@ -111,7 +111,7 @@ class HeroCarousel {
   }
   
   setupHoverEvents() {
-    const heroSection = document.querySelector('.hero-spotify-effect');
+    const heroSection = document.querySelector('.hero-section');
     
     heroSection.addEventListener('mouseenter', () => {
       this.stopCarousel();

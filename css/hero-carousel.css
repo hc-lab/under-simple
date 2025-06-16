@@ -1,18 +1,26 @@
-/* Carrusel de Hero con Efecto Ken Burns + Crossfade + Professional Filter */
+/* Carrusel de Hero Simple con Crossfade */
 /*
  * Efectos aplicados:
- * - Ken Burns: Zoom suave en las imágenes (1.0 → 1.1)
  * - Crossfade: Transición suave entre imágenes (2s)
- * - Professional Filter: Combinación sutil de blur + opacity + brightness
- * - Responsive Optimization: Efectos adaptativos según dispositivo
- * - Premium Quality: Máxima elegancia sin sacrificar legibilidad
+ * - Natural Images: Sin zoom, sin filtros, sin efectos
+ * - Auto-Carousel: Rotación cada 6 segundos
+ * - Interactive Controls: Indicadores clicables
  *
- * Valores profesionales:
- * - Desktop: blur(1.5px) + opacity(0.85) + brightness(0.9)
- * - Large screens: blur(2px) + opacity(0.8) + brightness(0.85) + contrast(1.1)
- * - Mobile: blur(1px) + opacity(0.9) + brightness(0.95)
- * - Small mobile: blur(0.5px) + opacity(0.95) + brightness(0.98)
+ * Características:
+ * - Sin efectos adicionales (eliminados)
+ * - Imágenes completamente naturales
+ * - Diseño limpio y minimalista
+ * - Responsive: Alturas adaptativas por dispositivo
  */
+
+/* Contenedor principal del hero */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
 
 .hero-carousel {
   position: absolute;
@@ -35,26 +43,26 @@
   background-repeat: no-repeat;
   opacity: 0;
   transform: scale(1);
-  transition: opacity 2s ease-in-out, transform 8s ease-out;
+  transition: opacity 2s ease-in-out;
   z-index: 1;
 
-  /* Efecto profesional muy sutil */
-  filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -webkit-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -moz-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -ms-filter: blur(1.5px) opacity(0.85) brightness(0.9);
+  /* Sin filtros - imagen natural */
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
 }
 
 /* Slide activo */
 .carousel-slide.active {
   opacity: 1;
-  animation: kenBurnsZoom 8s ease-out infinite;
+  /* Eliminado: animation: kenBurnsZoom 8s ease-out infinite; */
 
-  /* Efecto profesional muy sutil en slide activo */
-  filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -webkit-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -moz-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -ms-filter: blur(1.5px) opacity(0.85) brightness(0.9);
+  /* Sin filtros - imagen natural */
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
 }
 
 /* Efecto Ken Burns - Zoom suave y elegante */
@@ -71,43 +79,27 @@
 .carousel-slide.fade-in {
   opacity: 1;
   transform: scale(1);
-  animation: kenBurnsZoom 8s ease-out;
+  /* Eliminado: animation: kenBurnsZoom 8s ease-out; */
 
-  /* Efecto profesional muy sutil en transición de entrada */
-  filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -webkit-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -moz-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -ms-filter: blur(1.5px) opacity(0.85) brightness(0.9);
+  /* Sin filtros - imagen natural */
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
 }
 
 .carousel-slide.fade-out {
   opacity: 0;
-  transform: scale(1.1);
+  transform: scale(1);
 
-  /* Efecto profesional muy sutil en transición de salida */
-  filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -webkit-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -moz-filter: blur(1.5px) opacity(0.85) brightness(0.9);
-  -ms-filter: blur(1.5px) opacity(0.85) brightness(0.9);
+  /* Sin filtros - imagen natural */
+  filter: none;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
 }
 
-/* Overlay para mejorar la legibilidad del texto */
-.hero-carousel::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
+/* Capa superpuesta eliminada - sin desenfoque */
 
 /* Asegurar que el contenido esté por encima */
 .hero-content {
@@ -148,29 +140,33 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero-section {
+    height: 70vh; /* Altura reducida en móviles */
+  }
+
   .carousel-slide {
     background-position: center center;
 
-    /* Efecto muy sutil para móviles - máxima elegancia */
-    filter: blur(1px) opacity(0.9) brightness(0.95);
-    -webkit-filter: blur(1px) opacity(0.9) brightness(0.95);
-    -moz-filter: blur(1px) opacity(0.9) brightness(0.95);
-    -ms-filter: blur(1px) opacity(0.9) brightness(0.95);
+    /* Sin filtros - imagen natural */
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 
   .carousel-slide.active {
-    filter: blur(1px) opacity(0.9) brightness(0.95);
-    -webkit-filter: blur(1px) opacity(0.9) brightness(0.95);
-    -moz-filter: blur(1px) opacity(0.9) brightness(0.95);
-    -ms-filter: blur(1px) opacity(0.9) brightness(0.95);
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 
   .carousel-slide.fade-in,
   .carousel-slide.fade-out {
-    filter: blur(1px) opacity(0.9) brightness(0.95);
-    -webkit-filter: blur(1px) opacity(0.9) brightness(0.95);
-    -moz-filter: blur(1px) opacity(0.9) brightness(0.95);
-    -ms-filter: blur(1px) opacity(0.9) brightness(0.95);
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 
   @keyframes kenBurnsZoom {
@@ -198,40 +194,51 @@
   .carousel-slide {
     background-attachment: fixed;
 
-    /* Efecto profesional premium para pantallas grandes */
-    filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -webkit-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -moz-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -ms-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
+    /* Sin filtros - imagen natural */
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 
   .carousel-slide.active {
-    filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -webkit-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -moz-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -ms-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 
   .carousel-slide.fade-in,
   .carousel-slide.fade-out {
-    filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -webkit-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -moz-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
-    -ms-filter: blur(2px) opacity(0.8) brightness(0.85) contrast(1.1);
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 }
 
-/* Efecto ultra sutil para móviles pequeños */
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 80vh; /* Altura intermedia en tablets */
+  }
+}
+
+/* Móviles pequeños */
 @media (max-width: 480px) {
+  .hero-section {
+    height: 60vh; /* Altura más pequeña en móviles pequeños */
+  }
+
   .carousel-slide,
   .carousel-slide.active,
   .carousel-slide.fade-in,
   .carousel-slide.fade-out {
-    /* Efecto casi imperceptible pero elegante */
-    filter: blur(0.5px) opacity(0.95) brightness(0.98);
-    -webkit-filter: blur(0.5px) opacity(0.95) brightness(0.98);
-    -moz-filter: blur(0.5px) opacity(0.95) brightness(0.98);
-    -ms-filter: blur(0.5px) opacity(0.95) brightness(0.98);
+    /* Sin filtros - imagen natural */
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
   }
 }
 

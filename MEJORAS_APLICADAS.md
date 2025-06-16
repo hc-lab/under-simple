@@ -91,42 +91,87 @@
 - **Tablet (768px)**: 95% ancho máximo
 - **Móvil (576px)**: 100% ancho máximo
 
-## 🌫️ Filtro Profesional en Carrusel
+## 🎬 Carrusel Ultra Limpio
 
-### 7. **Professional Filter Effect Aplicado**
-- **Archivo modificado**: `css/hero-carousel.css`
-- **Efecto aplicado**: **"Professional Multi-Filter System"**
-- **Técnica**: `filter: blur() opacity() brightness() contrast()` combinados
-- **Características**:
-  - ✅ **Efecto ultra sutil** para máxima elegancia profesional
-  - ✅ **Multi-filter system** (blur + opacity + brightness + contrast)
-  - ✅ **Responsive optimization** adaptativo por dispositivo
-  - ✅ **Legibilidad perfecta** sin sacrificar el diseño
+### 7. **Limpieza Completa + Eliminación de Efectos Confusos**
+- **Problemas corregidos**:
+  - ❌ Línea de desenfoque gaussiano superior eliminada
+  - ❌ Nombres confusos como "Spotify Halftone" eliminados
+  - ❌ Efectos no utilizados eliminados
+- **Archivos eliminados/limpiados**:
+  - ❌ `css/hero-text-enhanced.css` - Ya no se usa
+  - ❌ `css/hero-centered.css` - Ya no se usa
+  - ❌ Referencia a `spotify-halftone-effect.css` - Eliminada
+- **Archivos modificados**:
+  - `css/hero-carousel.css` - Completamente limpio
+  - `css/navbar-logo-black.css` - Logo negro visible
+  - `index.html` - Nombres y referencias actualizadas
+  - `js/hero-carousel.js` - Referencias actualizadas
+- **Cambios aplicados**:
+  - ✅ **Renombrado**: `.hero-spotify-effect` → `.hero-section`
+  - ✅ **Eliminado**: Overlay blur superior confuso
+  - ✅ **Eliminado**: Capas de efectos no utilizadas
+  - ✅ **Eliminado**: Partículas y gradientes
+  - ✅ **CSS ultra limpio** sin referencias confusas
 
-### Valores Profesionales por Dispositivo:
-- **Pantallas grandes (1200px+)**: `blur(2px) opacity(0.8) brightness(0.85) contrast(1.1)` - Premium
-- **Desktop/Laptop**: `blur(1.5px) opacity(0.85) brightness(0.9)` - Profesional estándar
-- **Tablets (768px)**: `blur(1px) opacity(0.9) brightness(0.95)` - Muy sutil
-- **Móviles pequeños (480px)**: `blur(0.5px) opacity(0.95) brightness(0.98)` - Ultra sutil
+### Características del Carrusel Ultra Limpio:
+- **Altura definida**: `height: 100vh` (desktop) con responsive
+- **Simple Crossfade**: Solo transición suave entre imágenes (2s)
+- **Natural Images**: Imágenes completamente naturales sin efectos
+- **Auto-Carousel**: Rotación cada 6 segundos mantenida
+- **Interactive Controls**: Indicadores clicables mantenidos
+- **Sin superposición**: Flujo normal del documento respetado
+- **Ultra limpio**: Sin efectos confusos o innecesarios
 
-### Efectos Combinados en el Carrusel:
-1. **Ken Burns Effect**: Zoom suave 1.0 → 1.1 (8s)
-2. **Crossfade Transition**: Desvanecimiento entre imágenes (2s)
-3. **Professional Filter**: Sistema multi-filtro ultra sutil
-4. **Auto-Carousel**: Rotación cada 6 segundos
-5. **Interactive Controls**: Indicadores clicables
+### Alturas Responsive:
+- **Desktop (>992px)**: `height: 100vh` - Pantalla completa
+- **Tablet (768-992px)**: `height: 80vh` - Altura intermedia
+- **Móvil (480-768px)**: `height: 70vh` - Altura reducida
+- **Móvil pequeño (<480px)**: `height: 60vh` - Altura mínima
 
-### Beneficios del Sistema Profesional:
-- ✅ **Ultra elegancia**: Efecto casi imperceptible pero sofisticado
-- ✅ **Legibilidad perfecta**: Texto completamente legible
-- ✅ **Fondo premium**: Imágenes que complementan sin competir
-- ✅ **Profesionalismo máximo**: Aspecto de sitio web corporativo de alta gama
-- ✅ **Rendimiento optimizado**: Filtros ligeros para mejor performance
+### Elementos Eliminados:
+- ❌ **Overlay blur superior** - Línea confusa eliminada
+- ❌ **Efectos Spotify Halftone** - Nombres confusos eliminados
+- ❌ **Capas de gradientes** - Efectos innecesarios eliminados
+- ❌ **Partículas animadas** - Elementos distractores eliminados
 
-### Técnica Aplicada:
-**"Professional Multi-Filter Carousel"** - Sistema de filtros combinados que crea un fondo visual sofisticado y profesional sin distraer del contenido principal.
+### Logo Negro en Navbar:
+- **Posición**: Superior izquierda del navbar
+- **Color**: Negro (#000000) con hover gris (#333333)
+- **Tipografía**: Font-weight 800, tamaño responsive
+- **Elemento**: "UNDER◆" con diamante incluido
+- **Visibilidad**: `display: block !important` y `visibility: visible !important`
+
+### Contenido Superpuesto Eliminado:
+- **❌ Eliminado**: Todo el div `.hero-content`
+- **❌ Eliminado**: Título "UNDER◆" del hero
+- **❌ Eliminado**: Subtítulo "COMPROMISO QUE NOS HACE GRANDES"
+- **✅ Resultado**: Carrusel completamente limpio sin texto superpuesto
+
+### Efectos Actuales en el Carrusel:
+1. **~~Ken Burns Effect~~**: ❌ **Eliminado** (sin zoom)
+2. **Crossfade Transition**: ✅ Desvanecimiento entre imágenes (2s)
+3. **~~Professional Filter~~**: ❌ **Eliminado** (sin filtros)
+4. **Auto-Carousel**: ✅ Rotación cada 6 segundos
+5. **Interactive Controls**: ✅ Indicadores clicables
+
+### Beneficios del Diseño Ultra Limpio:
+- ✅ **Máxima claridad**: Imágenes completamente naturales sin texto superpuesto
+- ✅ **Enfoque total**: Sin distracciones visuales en el hero
+- ✅ **Rendimiento óptimo**: Sin efectos pesados ni elementos superpuestos
+- ✅ **Diseño minimalista**: Carrusel puro como fondo
+- ✅ **Logo prominente**: "UNDER◆" negro visible en navbar
+- ✅ **Navegación clara**: Menú principal como único elemento de texto
+
+### CSS Eliminados (Limpieza):
+- ❌ **hero-text-enhanced.css** - Estilos de texto superpuesto (ya no necesario)
+- ❌ **hero-centered.css** - Estilos de centrado (ya no necesario)
+- ✅ **Resultado**: Código más limpio y mantenible
+
+### Técnica Final:
+**"Clean Carousel with Top Blur Overlay"** - Carrusel natural con capa superior difuminada que crea un efecto elegante sin interferir con las imágenes.
 
 ## 🚀 Estado del Proyecto
 
-Tu proyecto UNDER MINERALS ahora está **libre de errores**, con **efectos visuales mejorados**, **contenido técnico actualizado**, **centrado perfecto universal** y **carrusel con filtro profesional ultra elegante**.
-¡Listo para impresionar a tus visitantes con información profesional y precisa en cualquier dispositivo!
+Tu proyecto UNDER MINERALS ahora está **libre de errores**, con **CSS optimizado y limpio**, **carrusel con overlay blur elegante**, **logo negro completamente visible** y **código mantenible**.
+¡Listo para impresionar a tus visitantes con un diseño profesional y código optimizado!

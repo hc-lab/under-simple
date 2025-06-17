@@ -168,10 +168,24 @@
 - ❌ **hero-centered.css** - Estilos de centrado (ya no necesario)
 - ✅ **Resultado**: Código más limpio y mantenible
 
+## 🔧 Logo Negro en Todas las Páginas
+
+### 8. **Logo "UNDER◆" Visible en Proyectos**
+- **Problema corregido**: ❌ Logo no aparecía en páginas de proyectos
+- **Archivos modificados**:
+  - `proyectos/flor-de-kantu.html` - Agregada referencia CSS
+  - `proyectos/guadalupe.html` - Agregada referencia CSS
+  - `proyectos/santamaria.html` - Agregada referencia CSS
+  - `proyectos/prosperidad.html` - Agregada referencia CSS
+- **Solución aplicada**:
+  - ✅ **Referencia agregada**: `<link rel="stylesheet" href="../css/navbar-logo-black.css">`
+  - ✅ **Logo visible**: En todas las páginas de proyectos
+  - ✅ **Consistencia**: Mismo estilo negro en todo el sitio
+
 ### Técnica Final:
-**"Clean Carousel with Top Blur Overlay"** - Carrusel natural con capa superior difuminada que crea un efecto elegante sin interferir con las imágenes.
+**"Ultra Clean Image Carousel with Universal Logo"** - Carrusel completamente limpio con logo negro consistente en todas las páginas del sitio.
 
 ## 🚀 Estado del Proyecto
 
-Tu proyecto UNDER MINERALS ahora está **libre de errores**, con **CSS optimizado y limpio**, **carrusel con overlay blur elegante**, **logo negro completamente visible** y **código mantenible**.
-¡Listo para impresionar a tus visitantes con un diseño profesional y código optimizado!
+Tu proyecto UNDER MINERALS ahora está **libre de errores**, con **CSS optimizado y limpio**, **carrusel ultra limpio**, **logo negro visible en todas las páginas** y **código completamente mantenible**.
+¡Listo para impresionar a tus visitantes con un diseño profesional y consistente en todo el sitio!

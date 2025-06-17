@@ -4,7 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../assets/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PROSPERIDAD - UNDER</title>
+    <title>Prosperidad - Proyecto Minero Cu-Mo | UNDER</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Proyecto minero Prosperidad en Lima - 650 hectáreas con mineralización de cobre y molibdeno, 12 años de vida útil y fácil acceso">
+    <meta name="keywords" content="Prosperidad, minería cobre, minería molibdeno, Lima, UNDER, proyecto minero, Cu-Mo, accesibilidad">
+    <meta name="author" content="UNDER Minerals">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prosperidad - Proyecto Minero Cu-Mo | UNDER">
+    <meta property="og:description" content="Proyecto minero en Lima con 650 hectáreas, mineralización Cu-Mo y 12 años de vida útil">
+    <meta property="og:image" content="../img/Prosperidad/(1).jpeg">
+    <meta property="og:url" content="https://under-minerals.com/proyectos/prosperidad.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prosperidad - Proyecto Minero Cu-Mo | UNDER">
+    <meta name="twitter:description" content="Proyecto minero en Lima con mineralización de cobre y molibdeno">
+    <meta name="twitter:image" content="../img/Prosperidad/(1).jpeg">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/mining-home.css">
     <link rel="stylesheet" href="../css/diamond-style.css">
@@ -12,6 +30,9 @@
     <link rel="stylesheet" href="../css/proyecto-hero.css">
     <link rel="stylesheet" href="../css/professional-navbar.css">
     <link rel="stylesheet" href="../css/navbar-logo-black.css">
+    <link rel="stylesheet" href="../css/proyecto-stats.css">
+    <link rel="stylesheet" href="../css/image-optimization.css">
+    <link rel="stylesheet" href="../css/proyecto-navigation.css">
     <link rel="stylesheet" href="../css/hide-project-effects.css">
   </head>
   <body>
@@ -38,6 +59,19 @@
           </nav>
         </header>
 
+        <!-- Breadcrumb Navigation -->
+        <section class="breadcrumb">
+          <div class="breadcrumb-container">
+            <nav class="breadcrumb-nav">
+              <a href="../index.html">Inicio</a>
+              <span class="breadcrumb-separator">›</span>
+              <a href="../index.html#noticias">Proyectos</a>
+              <span class="breadcrumb-separator">›</span>
+              <span class="breadcrumb-current">Prosperidad</span>
+            </nav>
+          </div>
+        </section>
+
         <!-- Proyecto Hero Section -->
         <section class="proyecto-hero proyecto-prosperidad">
           <div class="artistic-side-image">
@@ -53,7 +87,10 @@
             </p>
           </div>
           <div class="proyecto-hero-image">
-            <img src="../img/Prosperidad/(1).jpeg" alt="Proyecto Prosperidad">
+            <img src="../img/Prosperidad/(1).jpeg"
+                 alt="Vista panorámica del proyecto minero Prosperidad con mineralización Cu-Mo en Lima"
+                 loading="eager"
+                 decoding="async">
           </div>
         </section>
 
@@ -115,17 +152,59 @@
           </div>
           <div class="proyecto-gallery-grid">
             <div class="proyecto-gallery-item">
-              <img src="../img/Prosperidad/(1).jpeg" alt="Imagen del proyecto Prosperidad">
+              <img src="../img/Prosperidad/(1).jpeg"
+                   alt="Operaciones de extracción de cobre y molibdeno en proyecto Prosperidad"
+                   loading="lazy"
+                   decoding="async">
             </div>
             <div class="proyecto-gallery-item">
-              <img src="../img/Prosperidad/(2).jpeg" alt="Imagen del proyecto Prosperidad">
+              <img src="../img/Prosperidad/(2).jpeg"
+                   alt="Infraestructura del proyecto minero Prosperidad en Lima"
+                   loading="lazy"
+                   decoding="async">
             </div>
             <div class="proyecto-gallery-item">
-              <img src="../img/Prosperidad/(3).jpeg" alt="Imagen del proyecto Prosperidad">
+              <img src="../img/Prosperidad/(3).jpeg"
+                   alt="Vista de las instalaciones del proyecto Prosperidad 137"
+                   loading="lazy"
+                   decoding="async">
             </div>
           </div>
         </section>
 
+        <!-- Navegación entre Proyectos -->
+        <section class="proyecto-navigation">
+          <div class="navigation-container">
+            <a href="santamaria.html" class="nav-item nav-prev">
+              <span class="nav-icon">←</span>
+              <div class="nav-content">
+                <span class="nav-label">Anterior</span>
+                <span class="nav-title">Santamaría</span>
+              </div>
+            </a>
+
+            <a href="../index.html#noticias" class="nav-center">
+              Ver Todos los Proyectos
+            </a>
+
+            <a href="flor-de-kantu.html" class="nav-item nav-next">
+              <div class="nav-content">
+                <span class="nav-label">Siguiente</span>
+                <span class="nav-title">Flor de Kantu</span>
+              </div>
+              <span class="nav-icon">→</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="proyecto-cta">
+          <div class="cta-container">
+            <h2>¿Interesado en este proyecto?</h2>
+            <p>Contáctanos para más información sobre Prosperidad 137 y nuestras oportunidades en mineralización Cu-Mo.</p>
+            <a href="../index.html#contacto" class="cta-button">Contactar Ahora</a>
+          </div>
+        </section>
 
         <!-- Footer -->
         <footer class="mining-footer">
@@ -178,6 +257,9 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="../js/particles.js"></script>
     <script src="../js/main.js"></script>
+
+    <!-- Script para optimización de imágenes -->
+    <script src="../js/image-optimization.js"></script>
 
     <!-- Script para el navbar profesional -->
     <script src="../js/professional-navbar.js"></script>

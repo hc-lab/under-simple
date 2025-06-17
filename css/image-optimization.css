@@ -1,0 +1,153 @@
+/* Optimización de Imágenes - Lazy Loading y Efectos */
+
+/* Placeholder para imágenes mientras cargan */
+.proyecto-gallery-item img,
+.proyecto-hero-image img {
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+/* Animación de carga tipo shimmer */
+@keyframes loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Cuando la imagen está cargada */
+.proyecto-gallery-item img[loading="lazy"]:not([data-loaded]),
+.proyecto-hero-image img:not([data-loaded]) {
+  filter: blur(5px);
+  opacity: 0;
+}
+
+.proyecto-gallery-item img[data-loaded="true"],
+.proyecto-hero-image img[data-loaded="true"] {
+  filter: blur(0);
+  opacity: 1;
+  animation: none;
+  background: none;
+}
+
+/* Efecto hover mejorado para galería */
+.proyecto-gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto-gallery-item img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proyecto-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Mejora para imagen hero */
+.proyecto-hero-image {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.proyecto-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.proyecto-hero-image:hover img {
+  transform: scale(1.03);
+}
+
+/* Indicador de carga para imágenes */
+.image-loading {
+  position: relative;
+}
+
+.image-loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive optimizations */
+@media (max-width: 768px) {
+  .proyecto-gallery-item:hover {
+    transform: scale(1.01);
+  }
+  
+  .proyecto-gallery-item:hover img {
+    transform: scale(1.02);
+  }
+}
+
+/* Preload hint para imágenes críticas */
+.critical-image {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Lazy loading fallback para navegadores antiguos */
+@supports not (loading: lazy) {
+  .proyecto-gallery-item img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .proyecto-gallery-item img[loading="lazy"].loaded {
+    opacity: 1;
+  }
+}
+
+/* Mejora de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .proyecto-gallery-item,
+  .proyecto-gallery-item img,
+  .proyecto-hero-image img {
+    transition: none;
+    animation: none;
+  }
+  
+  .proyecto-gallery-item:hover,
+  .proyecto-gallery-item:hover img,
+  .proyecto-hero-image:hover img {
+    transform: none;
+  }
+}
+
+/* Optimización para conexiones lentas */
+@media (prefers-reduced-data: reduce) {
+  .proyecto-gallery-item img[loading="lazy"] {
+    content-visibility: auto;
+    contain-intrinsic-size: 250px 200px;
+  }
+}

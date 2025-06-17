@@ -4,7 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../assets/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SANTAMARIA - UNDER</title>
+    <title>Santamaría - Proyecto Minero Pb-Zn-Ag | UNDER</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Proyecto minero Santamaría en Huancavelica - 850 hectáreas con mineralización de plomo, zinc y plata, 10 años de vida útil">
+    <meta name="keywords" content="Santamaría, minería plomo, minería zinc, minería plata, Huancavelica, UNDER, proyecto minero, Pb-Zn-Ag">
+    <meta name="author" content="UNDER Minerals">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Santamaría - Proyecto Minero Pb-Zn-Ag | UNDER">
+    <meta property="og:description" content="Proyecto minero en Huancavelica con 850 hectáreas, mineralización Pb-Zn-Ag y 10 años de vida útil">
+    <meta property="og:image" content="../img/Santamaria/5.jpeg">
+    <meta property="og:url" content="https://under-minerals.com/proyectos/santamaria.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Santamaría - Proyecto Minero Pb-Zn-Ag | UNDER">
+    <meta name="twitter:description" content="Proyecto minero en Huancavelica con mineralización de plomo, zinc y plata">
+    <meta name="twitter:image" content="../img/Santamaria/5.jpeg">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/mining-home.css">
     <link rel="stylesheet" href="../css/diamond-style.css">
@@ -12,6 +30,9 @@
     <link rel="stylesheet" href="../css/proyecto-hero.css">
     <link rel="stylesheet" href="../css/professional-navbar.css">
     <link rel="stylesheet" href="../css/navbar-logo-black.css">
+    <link rel="stylesheet" href="../css/proyecto-stats.css">
+    <link rel="stylesheet" href="../css/image-optimization.css">
+    <link rel="stylesheet" href="../css/proyecto-navigation.css">
     <link rel="stylesheet" href="../css/santamaria-specific.css">
     <link rel="stylesheet" href="../css/hide-project-effects.css">
   </head>
@@ -39,6 +60,19 @@
           </nav>
         </header>
 
+        <!-- Breadcrumb Navigation -->
+        <section class="breadcrumb">
+          <div class="breadcrumb-container">
+            <nav class="breadcrumb-nav">
+              <a href="../index.html">Inicio</a>
+              <span class="breadcrumb-separator">›</span>
+              <a href="../index.html#noticias">Proyectos</a>
+              <span class="breadcrumb-separator">›</span>
+              <span class="breadcrumb-current">Santamaría</span>
+            </nav>
+          </div>
+        </section>
+
         <!-- Proyecto Hero Section -->
         <section class="proyecto-hero proyecto-santamaria">
           <div class="artistic-side-image" style="background-image: url('../img/Santamaria/4.jpeg');">
@@ -57,7 +91,10 @@
             </p>
           </div>
           <div class="proyecto-hero-image">
-            <img src="../img/Santamaria/4.jpeg" alt="Proyecto Santamaria">
+            <img src="../img/Santamaria/4.jpeg"
+                 alt="Vista panorámica del proyecto minero Santamaría con mineralización Pb-Zn-Ag en Huancavelica"
+                 loading="eager"
+                 decoding="async">
           </div>
         </section>
 
@@ -115,17 +152,59 @@
           </div>
           <div class="proyecto-gallery-grid">
             <div class="proyecto-gallery-item">
-              <img src="../img/Santamaria/(1).jpeg" alt="Imagen del proyecto Santamaria">
+              <img src="../img/Santamaria/(1).jpeg"
+                   alt="Operaciones de extracción de plomo, zinc y plata en proyecto Santamaría"
+                   loading="lazy"
+                   decoding="async">
             </div>
             <div class="proyecto-gallery-item">
-              <img src="../img/Santamaria/(2).jpeg" alt="Imagen del proyecto Santamaria">
+              <img src="../img/Santamaria/(2).jpeg"
+                   alt="Infraestructura minera del proyecto Santamaría en Huancavelica"
+                   loading="lazy"
+                   decoding="async">
             </div>
             <div class="proyecto-gallery-item">
-              <img src="../img/Santamaria/(3).jpeg" alt="Imagen del proyecto Santamaria">
+              <img src="../img/Santamaria/(3).jpeg"
+                   alt="Vista de las instalaciones del proyecto minero Santamaría"
+                   loading="lazy"
+                   decoding="async">
             </div>
           </div>
         </section>
 
+        <!-- Navegación entre Proyectos -->
+        <section class="proyecto-navigation">
+          <div class="navigation-container">
+            <a href="guadalupe.html" class="nav-item nav-prev">
+              <span class="nav-icon">←</span>
+              <div class="nav-content">
+                <span class="nav-label">Anterior</span>
+                <span class="nav-title">Guadalupe</span>
+              </div>
+            </a>
+
+            <a href="../index.html#noticias" class="nav-center">
+              Ver Todos los Proyectos
+            </a>
+
+            <a href="prosperidad.html" class="nav-item nav-next">
+              <div class="nav-content">
+                <span class="nav-label">Siguiente</span>
+                <span class="nav-title">Prosperidad</span>
+              </div>
+              <span class="nav-icon">→</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="proyecto-cta">
+          <div class="cta-container">
+            <h2>¿Interesado en este proyecto?</h2>
+            <p>Contáctanos para más información sobre Santamaría y nuestras oportunidades en mineralización Pb-Zn-Ag.</p>
+            <a href="../index.html#contacto" class="cta-button">Contactar Ahora</a>
+          </div>
+        </section>
 
         <!-- Footer -->
         <footer class="mining-footer">
@@ -178,6 +257,9 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="../js/particles.js"></script>
     <script src="../js/main.js"></script>
+
+    <!-- Script para optimización de imágenes -->
+    <script src="../js/image-optimization.js"></script>
 
     <!-- Script para el navbar profesional -->
     <script src="../js/professional-navbar.js"></script>

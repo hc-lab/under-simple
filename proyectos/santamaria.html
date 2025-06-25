@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../assets/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Santamaría - Proyecto Minero Pb-Zn-Ag | UNDER</title>
+    <title>Santamaría - Proyecto Minero | UNDER</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Proyecto minero Santamaría en Huancavelica - 850 hectáreas con mineralización de plomo, zinc y plata, 10 años de vida útil">
@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="../css/proyecto-navigation.css">
     <link rel="stylesheet" href="../css/santamaria-specific.css">
     <link rel="stylesheet" href="../css/hide-project-effects.css">
+    <link rel="stylesheet" href="../css/language-selector.css">
   </head>
   <body>
     <div id="root">
@@ -44,19 +45,24 @@
           <div class="pro-navbar-logo">
             <h1>UNDER<span class="diamond-small">◆</span></h1>
           </div>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <nav class="pro-navbar-nav">
-            <a href="../index.html" class="pro-nav-item">INICIO</a>
-            <a href="../index.html#nosotros" class="pro-nav-item">NOSOTROS</a>
+            <a href="../index.html" class="pro-nav-item" data-i18n="nav.home">INICIO</a>
+            <a href="../index.html#nosotros" class="pro-nav-item" data-i18n="nav.about">NOSOTROS</a>
             <div class="pro-dropdown">
-              <a href="../index.html#noticias" class="pro-dropdown-toggle">PROYECTOS <span class="arrow"></span></a>
+              <a href="../index.html#noticias" class="pro-dropdown-toggle" data-i18n="nav.projects">PROYECTOS <span class="arrow"></span></a>
               <div class="pro-dropdown-menu">
-                <a href="flor-de-kantu.html" class="pro-dropdown-item">FLOR DE KANTU</a>
-                <a href="guadalupe.html" class="pro-dropdown-item">GUADALUPE</a>
-                <a href="santamaria.html" class="pro-dropdown-item">SANTAMARIA</a>
-                <a href="prosperidad.html" class="pro-dropdown-item">PROSPERIDAD</a>
+                <a href="flor-de-kantu.html" class="pro-dropdown-item" data-i18n="projects.florDeKantu.title">FLOR DE KANTU</a>
+                <a href="guadalupe.html" class="pro-dropdown-item" data-i18n="projects.guadalupe.title">GUADALUPE</a>
+                <a href="santamaria.html" class="pro-dropdown-item" data-i18n="projects.santamaria.title">SANTAMARIA</a>
+                <a href="prosperidad.html" class="pro-dropdown-item" data-i18n="projects.prosperidad.title">PROSPERIDAD</a>
               </div>
             </div>
-            <a href="../index.html#contacto" class="pro-nav-item">CONTACTO</a>
+            <a href="../index.html#contacto" class="pro-nav-item" data-i18n="nav.contact">CONTACTO</a>
           </nav>
         </header>
 
@@ -64,11 +70,11 @@
         <section class="breadcrumb">
           <div class="breadcrumb-container">
             <nav class="breadcrumb-nav">
-              <a href="../index.html">Inicio</a>
+              <a href="../index.html" data-i18n="nav.home">Inicio</a>
               <span class="breadcrumb-separator">›</span>
-              <a href="../index.html#noticias">Proyectos</a>
+              <a href="../index.html#noticias" data-i18n="nav.projects">Proyectos</a>
               <span class="breadcrumb-separator">›</span>
-              <span class="breadcrumb-current">Santamaría</span>
+              <span class="breadcrumb-current" data-i18n="projects.santamaria.title">Santamaría</span>
             </nav>
           </div>
         </section>
@@ -81,13 +87,11 @@
             <div class="frame"></div>
           </div>
           <div class="proyecto-hero-content">
-            <h1 class="text-with-gradient">SANTAMARIA</h1>
+            <h1 class="text-with-gradient" data-i18n="projects.santamaria.hero.title">PROYECTO SANTAMARÍA</h1>
             <div class="elegant-line"></div>
-            <p class="proyecto-description">
-              Un proyecto minero de vanguardia que combina la excelencia operativa con
-              un profundo respeto por el entorno natural. En Santamaria, aplicamos los
-              más altos estándares de seguridad y sostenibilidad, mientras contribuimos
-              activamente al desarrollo económico y social de la región.
+            <h2 class="proyecto-subtitle" data-i18n="projects.santamaria.hero.subtitle">Excelencia y Seguridad en Minería</h2>
+            <p class="proyecto-description" data-i18n="projects.santamaria.hero.description">
+              Un proyecto minero de vanguardia que combina la excelencia operativa con un profundo respeto por el entorno natural.
             </p>
           </div>
           <div class="proyecto-hero-image">
@@ -101,7 +105,7 @@
         <!-- Características del Proyecto -->
         <section class="proyecto-features">
           <div class="proyecto-section-header">
-            <h2>Características del Proyecto</h2>
+            <h2 data-i18n="projects.santamaria.features.title">Características del Proyecto</h2>
             <div class="elegant-line"></div>
           </div>
           <div class="proyecto-features-grid">
@@ -111,8 +115,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3>Seguridad</h3>
-              <p>Implementamos los más altos estándares de seguridad para proteger a nuestros trabajadores y las comunidades cercanas.</p>
+              <h3 data-i18n="projects.santamaria.features.safety">Seguridad</h3>
+              <p data-i18n="projects.santamaria.features.safetyDesc">Implementamos los más altos estándares de seguridad para proteger a nuestros trabajadores y las comunidades cercanas.</p>
             </div>
             <div class="proyecto-feature">
               <div class="proyecto-feature-icon">
@@ -120,8 +124,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
               </div>
-              <h3>Gestión del Agua</h3>
-              <p>Utilizamos sistemas avanzados de tratamiento y reciclaje de agua para minimizar nuestro impacto en los recursos hídricos locales.</p>
+              <h3 data-i18n="projects.santamaria.features.water">Gestión del Agua</h3>
+              <p data-i18n="projects.santamaria.features.waterDesc">Utilizamos sistemas avanzados de tratamiento y reciclaje de agua para minimizar nuestro impacto en los recursos hídricos locales.</p>
             </div>
             <div class="proyecto-feature">
               <div class="proyecto-feature-icon">
@@ -129,8 +133,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3>Desarrollo Local</h3>
-              <p>Invertimos en proyectos de desarrollo económico local para fortalecer las economías de las comunidades donde operamos.</p>
+              <h3 data-i18n="projects.santamaria.features.development">Desarrollo Local</h3>
+              <p data-i18n="projects.santamaria.features.developmentDesc">Invertimos en proyectos de desarrollo económico local para fortalecer las economías de las comunidades donde operamos.</p>
             </div>
             <div class="proyecto-feature">
               <div class="proyecto-feature-icon">
@@ -138,8 +142,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <h3>Economía Circular</h3>
-              <p>Implementamos principios de economía circular para maximizar la eficiencia de recursos y minimizar los residuos.</p>
+              <h3 data-i18n="projects.santamaria.features.circular">Economía Circular</h3>
+              <p data-i18n="projects.santamaria.features.circularDesc">Implementamos principios de economía circular para maximizar la eficiencia de recursos y minimizar los residuos.</p>
             </div>
           </div>
         </section>
@@ -147,7 +151,7 @@
         <!-- Galería de Imágenes -->
         <section class="proyecto-gallery">
           <div class="proyecto-section-header">
-            <h2>Galería</h2>
+            <h2 data-i18n="projects.santamaria.gallery">Galería</h2>
             <div class="elegant-line"></div>
           </div>
           <div class="proyecto-gallery-grid">
@@ -178,19 +182,19 @@
             <a href="guadalupe.html" class="nav-item nav-prev">
               <span class="nav-icon">←</span>
               <div class="nav-content">
-                <span class="nav-label">Anterior</span>
-                <span class="nav-title">Guadalupe</span>
+                <span class="nav-label" data-i18n="navigation.previous">Anterior</span>
+                <span class="nav-title" data-i18n="projects.guadalupe.title">Guadalupe</span>
               </div>
             </a>
 
-            <a href="../index.html#noticias" class="nav-center">
+            <a href="../index.html#noticias" class="nav-center" data-i18n="navigation.viewAll">
               Ver Todos los Proyectos
             </a>
 
             <a href="prosperidad.html" class="nav-item nav-next">
               <div class="nav-content">
-                <span class="nav-label">Siguiente</span>
-                <span class="nav-title">Prosperidad</span>
+                <span class="nav-label" data-i18n="navigation.next">Siguiente</span>
+                <span class="nav-title" data-i18n="projects.prosperidad.title">Prosperidad</span>
               </div>
               <span class="nav-icon">→</span>
             </a>
@@ -200,9 +204,9 @@
         <!-- Call to Action -->
         <section class="proyecto-cta">
           <div class="cta-container">
-            <h2>¿Interesado en este proyecto?</h2>
-            <p>Contáctanos para más información sobre Santamaría y nuestras oportunidades en mineralización Pb-Zn-Ag.</p>
-            <a href="../index.html#contacto" class="cta-button">Contactar Ahora</a>
+            <h2 data-i18n="projects.santamaria.cta.title">¿Interesado en este proyecto?</h2>
+            <p data-i18n="projects.santamaria.cta.description">Contáctanos para más información sobre Santamaría y nuestras oportunidades en mineralización Pb-Zn-Ag.</p>
+            <a href="../index.html#contacto" class="cta-button" data-i18n="projects.santamaria.cta.button">Contactar Ahora</a>
           </div>
         </section>
 
@@ -210,25 +214,25 @@
         <footer class="mining-footer">
           <div class="mining-footer-container">
             <div class="mining-footer-logo">
-              <h2>UNDER</h2>
-              <p>COMPROMISO QUE NOS HACE GRANDES</p>
+              <h2 data-i18n="footer.company">UNDER</h2>
+              <p data-i18n="footer.tagline">COMPROMISO QUE NOS HACE GRANDES</p>
             </div>
             <div class="mining-footer-links">
               <div class="mining-footer-links-column">
-                <h3>Enlaces</h3>
-                <a href="../index.html">INICIO</a>
-                <a href="../index.html#nosotros">NOSOTROS</a>
-                <a href="../index.html#noticias">PROYECTOS</a>
-                <a href="../index.html#contacto">CONTACTO</a>
+                <h3 data-i18n="footer.links">Enlaces</h3>
+                <a href="../index.html" data-i18n="nav.home">INICIO</a>
+                <a href="../index.html#nosotros" data-i18n="nav.about">NOSOTROS</a>
+                <a href="../index.html#noticias" data-i18n="nav.projects">PROYECTOS</a>
+                <a href="../index.html#contacto" data-i18n="nav.contact">CONTACTO</a>
               </div>
               <div class="mining-footer-links-column">
-                <h3 style="cursor: pointer !important;">Legal</h3>
-                <a href="#" style="cursor: pointer !important;">Términos y condiciones</a>
-                <a href="#" style="cursor: pointer !important;">Política de privacidad</a>
-                <a href="#" style="cursor: pointer !important;">Política de cookies</a>
+                <h3 style="cursor: pointer !important;" data-i18n="footer.legal">Legal</h3>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.terms">Términos y condiciones</a>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.privacy">Política de privacidad</a>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.cookies">Política de cookies</a>
               </div>
               <div class="mining-footer-links-column">
-                <h3 style="cursor: pointer !important;">Síguenos</h3>
+                <h3 style="cursor: pointer !important;" data-i18n="footer.follow">Síguenos</h3>
                 <div class="mining-social-links">
                   <a href="#" class="mining-social-link" style="cursor: pointer !important;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
@@ -263,5 +267,8 @@
 
     <!-- Script para el navbar profesional -->
     <script src="../js/professional-navbar.js"></script>
+    <!-- Script para multiidioma -->
+    <script src="../js/i18n.js"></script>
+    <script src="../js/inherit-footer.js"></script>
   </body>
 </html>

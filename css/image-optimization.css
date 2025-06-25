@@ -48,9 +48,10 @@
 
 .proyecto-gallery-item img {
   transition: transform 0.3s ease, filter 0.3s ease;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 .proyecto-gallery-item:hover img {

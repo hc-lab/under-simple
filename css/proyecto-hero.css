@@ -98,7 +98,7 @@
 }
 
 .proyecto-guadalupe .artistic-side-image {
-  background-image: url('../img/Guadalupe/1.jpg');
+  background-image: url('../img/Guadalupe/(3)-1.jpg');
 }
 
 .proyecto-santamaria .artistic-side-image {
@@ -106,7 +106,7 @@
 }
 
 .proyecto-prosperidad .artistic-side-image {
-  background-image: url('../img/Prosperidad/1.jpg');
+  background-image: url('../img/Prosperidad/1.jpeg');
 }
 
 /* Capa adicional para suavizar la intensidad de la imagen */
@@ -187,12 +187,13 @@
   align-items: center;
   justify-content: center;
   z-index: 3;
-  margin-left: 25%;
 }
 
 .proyecto-hero-image img {
   max-width: 100%;
   height: auto;
+  max-height: 450px; /* Limita la altura máxima de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -210,7 +211,7 @@
   }
 
   .proyecto-hero-image {
-    margin-left: 20%;
+    margin-left: 0;
   }
 
   /* Ajustamos el efecto halftone */
@@ -294,10 +295,14 @@
   }
 
   .proyecto-hero-image {
-    grid-column: 1;
+    position: relative;
+    grid-column: 1 / -1;
     grid-row: 1;
     margin-left: 0;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
   }
 
   /* Ajustamos el efecto halftone */

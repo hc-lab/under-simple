@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="../css/image-optimization.css">
     <link rel="stylesheet" href="../css/proyecto-navigation.css">
     <link rel="stylesheet" href="../css/hide-project-effects.css">
+    <link rel="stylesheet" href="../css/language-selector.css">
   </head>
   <body>
     <div id="root">
@@ -42,19 +43,24 @@
           <div class="pro-navbar-logo">
             <h1>UNDER<span class="diamond-small">◆</span></h1>
           </div>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <nav class="pro-navbar-nav">
-            <a href="../index.html" class="pro-nav-item">INICIO</a>
-            <a href="../index.html#nosotros" class="pro-nav-item">NOSOTROS</a>
+            <a href="../index.html" class="pro-nav-item" data-i18n="nav.home">INICIO</a>
+            <a href="../index.html#nosotros" class="pro-nav-item" data-i18n="nav.about">NOSOTROS</a>
             <div class="pro-dropdown">
-              <a href="../index.html#noticias" class="pro-dropdown-toggle">PROYECTOS <span class="arrow"></span></a>
+              <a href="../index.html#noticias" class="pro-dropdown-toggle" data-i18n="nav.projects">PROYECTOS <span class="arrow"></span></a>
               <div class="pro-dropdown-menu">
-                <a href="flor-de-kantu.html" class="pro-dropdown-item">FLOR DE KANTU</a>
-                <a href="guadalupe.html" class="pro-dropdown-item">GUADALUPE</a>
-                <a href="santamaria.html" class="pro-dropdown-item">SANTAMARIA</a>
-                <a href="prosperidad.html" class="pro-dropdown-item">PROSPERIDAD</a>
+                <a href="flor-de-kantu.html" class="pro-dropdown-item" data-i18n="projects.florDeKantu.title">FLOR DE KANTU</a>
+                <a href="guadalupe.html" class="pro-dropdown-item" data-i18n="projects.guadalupe.title">GUADALUPE</a>
+                <a href="santamaria.html" class="pro-dropdown-item" data-i18n="projects.santamaria.title">SANTAMARIA</a>
+                <a href="prosperidad.html" class="pro-dropdown-item" data-i18n="projects.prosperidad.title">PROSPERIDAD</a>
               </div>
             </div>
-            <a href="../index.html#contacto" class="pro-nav-item">CONTACTO</a>
+            <a href="../index.html#contacto" class="pro-nav-item" data-i18n="nav.contact">CONTACTO</a>
           </nav>
         </header>
 
@@ -62,11 +68,11 @@
         <section class="breadcrumb">
           <div class="breadcrumb-container">
             <nav class="breadcrumb-nav">
-              <a href="../index.html">Inicio</a>
+              <a href="../index.html" data-i18n="nav.home">Inicio</a>
               <span class="breadcrumb-separator">›</span>
-              <a href="../index.html#noticias">Proyectos</a>
+              <a href="../index.html#noticias" data-i18n="nav.projects">Proyectos</a>
               <span class="breadcrumb-separator">›</span>
-              <span class="breadcrumb-current">Guadalupe</span>
+              <span class="breadcrumb-current" data-i18n="projects.guadalupe.title">Guadalupe</span>
             </nav>
           </div>
         </section>
@@ -79,13 +85,11 @@
             <div class="frame"></div>
           </div>
           <div class="proyecto-hero-content">
-            <h1 class="text-with-gradient">GUADALUPE</h1>
+            <h1 class="text-with-gradient" data-i18n="projects.guadalupe.hero.title">PROYECTO GUADALUPE</h1>
             <div class="elegant-line"></div>
-            <p class="proyecto-description">
-              Un proyecto innovador que representa nuestra visión de minería responsable,
-              donde implementamos las últimas tecnologías para la extracción eficiente de
-              minerales, mientras mantenemos un firme compromiso con la protección del
-              medio ambiente y el bienestar de las comunidades circundantes.
+            <h2 class="proyecto-subtitle" data-i18n="projects.guadalupe.hero.subtitle">Innovación y Sostenibilidad en Minería</h2>
+            <p class="proyecto-description" data-i18n="projects.guadalupe.hero.description">
+              Un proyecto minero de vanguardia que combina la innovación tecnológica con un profundo respeto por el medio ambiente y las comunidades locales.
             </p>
           </div>
           <div class="proyecto-hero-image">
@@ -99,7 +103,7 @@
         <!-- Características del Proyecto -->
         <section class="proyecto-features">
           <div class="proyecto-section-header">
-            <h2>Características del Proyecto</h2>
+            <h2 data-i18n="projects.guadalupe.features.title">Características del Proyecto</h2>
             <div class="elegant-line"></div>
           </div>
           <div class="proyecto-features-grid">
@@ -109,8 +113,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3>Eficiencia Energética</h3>
-              <p>Implementamos sistemas de energía renovable y optimizamos el consumo energético en todas nuestras operaciones.</p>
+              <h3 data-i18n="projects.guadalupe.features.efficiency">Eficiencia Energética</h3>
+              <p data-i18n="projects.guadalupe.features.efficiencyDesc">Implementamos sistemas de energía renovable y optimizamos el consumo energético en todas nuestras operaciones.</p>
             </div>
             <div class="proyecto-feature">
               <div class="proyecto-feature-icon">
@@ -118,8 +122,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3>Educación</h3>
-              <p>Desarrollamos programas educativos para las comunidades locales, enfocados en la formación técnica y ambiental.</p>
+              <h3 data-i18n="projects.guadalupe.features.education">Educación</h3>
+              <p data-i18n="projects.guadalupe.features.educationDesc">Desarrollamos programas educativos para las comunidades locales, enfocados en la formación técnica y ambiental.</p>
             </div>
             <div class="proyecto-feature">
               <div class="proyecto-feature-icon">
@@ -127,8 +131,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3>Conservación</h3>
-              <p>Implementamos programas de conservación y restauración de ecosistemas en las áreas donde operamos.</p>
+              <h3 data-i18n="projects.guadalupe.features.conservation">Conservación</h3>
+              <p data-i18n="projects.guadalupe.features.conservationDesc">Implementamos programas de conservación y restauración de ecosistemas en las áreas donde operamos.</p>
             </div>
             <div class="proyecto-feature">
               <div class="proyecto-feature-icon">
@@ -136,8 +140,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
-              <h3>Transparencia</h3>
-              <p>Mantenemos una comunicación abierta y transparente con todos nuestros grupos de interés.</p>
+              <h3 data-i18n="projects.guadalupe.features.transparency">Transparencia</h3>
+              <p data-i18n="projects.guadalupe.features.transparencyDesc">Mantenemos una comunicación abierta y transparente con todos nuestros grupos de interés.</p>
             </div>
           </div>
         </section>
@@ -145,7 +149,7 @@
         <!-- Galería de Imágenes -->
         <section class="proyecto-gallery">
           <div class="proyecto-section-header">
-            <h2>Galería</h2>
+            <h2 data-i18n="projects.guadalupe.gallery">Galería</h2>
             <div class="elegant-line"></div>
           </div>
           <div class="proyecto-gallery-grid">
@@ -176,19 +180,19 @@
             <a href="flor-de-kantu.html" class="nav-item nav-prev">
               <span class="nav-icon">←</span>
               <div class="nav-content">
-                <span class="nav-label">Anterior</span>
-                <span class="nav-title">Flor de Kantu</span>
+                <span class="nav-label" data-i18n="navigation.previous">Anterior</span>
+                <span class="nav-title" data-i18n="projects.florDeKantu.title">Flor de Kantu</span>
               </div>
             </a>
 
-            <a href="../index.html#noticias" class="nav-center">
+            <a href="../index.html#noticias" class="nav-center" data-i18n="navigation.viewAll">
               Ver Todos los Proyectos
             </a>
 
             <a href="santamaria.html" class="nav-item nav-next">
               <div class="nav-content">
-                <span class="nav-label">Siguiente</span>
-                <span class="nav-title">Santamaría</span>
+                <span class="nav-label" data-i18n="navigation.next">Siguiente</span>
+                <span class="nav-title" data-i18n="projects.santamaria.title">Santamaría</span>
               </div>
               <span class="nav-icon">→</span>
             </a>
@@ -198,9 +202,9 @@
         <!-- Call to Action -->
         <section class="proyecto-cta">
           <div class="cta-container">
-            <h2>¿Interesado en este proyecto?</h2>
-            <p>Contáctanos para más información sobre Guadalupe 777 y nuestras oportunidades en mineralización de oro y plata.</p>
-            <a href="../index.html#contacto" class="cta-button">Contactar Ahora</a>
+            <h2 data-i18n="projects.guadalupe.cta.title">¿Interesado en este proyecto?</h2>
+            <p data-i18n="projects.guadalupe.cta.description">Contáctanos para más información sobre Guadalupe 777 y nuestras oportunidades en mineralización de oro y plata.</p>
+            <a href="../index.html#contacto" class="cta-button" data-i18n="projects.guadalupe.cta.button">Contactar Ahora</a>
           </div>
         </section>
 
@@ -208,25 +212,25 @@
         <footer class="mining-footer">
           <div class="mining-footer-container">
             <div class="mining-footer-logo">
-              <h2>UNDER</h2>
-              <p>COMPROMISO QUE NOS HACE GRANDES</p>
+              <h2 data-i18n="footer.company">UNDER</h2>
+              <p data-i18n="footer.tagline">COMPROMISO QUE NOS HACE GRANDES</p>
             </div>
             <div class="mining-footer-links">
               <div class="mining-footer-links-column">
-                <h3>Enlaces</h3>
-                <a href="../index.html">INICIO</a>
-                <a href="../index.html#nosotros">NOSOTROS</a>
-                <a href="../index.html#noticias">PROYECTOS</a>
-                <a href="../index.html#contacto">CONTACTO</a>
+                <h3 data-i18n="footer.links">Enlaces</h3>
+                <a href="../index.html" data-i18n="nav.home">INICIO</a>
+                <a href="../index.html#nosotros" data-i18n="nav.about">NOSOTROS</a>
+                <a href="../index.html#noticias" data-i18n="nav.projects">PROYECTOS</a>
+                <a href="../index.html#contacto" data-i18n="nav.contact">CONTACTO</a>
               </div>
               <div class="mining-footer-links-column">
-                <h3 style="cursor: pointer !important;">Legal</h3>
-                <a href="#" style="cursor: pointer !important;">Términos y condiciones</a>
-                <a href="#" style="cursor: pointer !important;">Política de privacidad</a>
-                <a href="#" style="cursor: pointer !important;">Política de cookies</a>
+                <h3 style="cursor: pointer !important;" data-i18n="footer.legal">Legal</h3>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.terms">Términos y condiciones</a>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.privacy">Política de privacidad</a>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.cookies">Política de cookies</a>
               </div>
               <div class="mining-footer-links-column">
-                <h3 style="cursor: pointer !important;">Síguenos</h3>
+                <h3 style="cursor: pointer !important;" data-i18n="footer.follow">Síguenos</h3>
                 <div class="mining-social-links">
                   <a href="#" class="mining-social-link" style="cursor: pointer !important;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
@@ -245,7 +249,7 @@
             </div>
           </div>
           <div class="mining-footer-bottom">
-            <p>&copy; 2025 UNDER. Todos los derechos reservados.</p>
+            <p>&copy; 2025 UNDER. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
           </div>
         </footer>
       </div>
@@ -261,5 +265,8 @@
 
     <!-- Script para el navbar profesional -->
     <script src="../js/professional-navbar.js"></script>
+    <!-- Script para multiidioma -->
+    <script src="../js/i18n.js"></script>
+    <script src="../js/inherit-footer.js"></script>
   </body>
 </html>

@@ -2,24 +2,31 @@
 
 .pro-navbar-logo h1 {
   color: #000000 !important;
-  font-weight: 800 !important;
-  font-size: 28px !important;
+  font-weight: 900 !important; /* Más negrita: 800 → 900 */
+  font-size: 32px !important; /* Más grande: 28px → 32px */
   margin: 0 !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 1.2px !important; /* Ligeramente más espaciado */
   text-decoration: none !important;
   display: block !important; /* Forzar que se muestre */
   visibility: visible !important; /* Asegurar visibilidad */
+  white-space: nowrap !important; /* Evitar que se separe en líneas */
+  user-select: none !important; /* Evitar selección de texto */
+  cursor: pointer !important;
+  line-height: 1 !important; /* Altura de línea consistente */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important; /* Sombra sutil para más presencia */
 }
 
 .pro-navbar-logo h1 .diamond-small {
   color: #000000 !important;
-  font-size: 0.8em !important;
+  font-size: 0.85em !important; /* Ligeramente más grande */
   vertical-align: middle !important;
-  margin-left: 4px !important;
+  margin-left: 5px !important; /* Más espacio */
+  font-weight: 900 !important; /* Más negrita también */
   /* Forzar color negro sin herencia */
   background: none !important;
   -webkit-text-fill-color: #000000 !important;
   text-fill-color: #000000 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important; /* Misma sombra */
 }
 
 /* Asegurar que el logo sea visible en todas las situaciones */
@@ -45,13 +52,13 @@
 /* Responsive para el logo */
 @media (max-width: 768px) {
   .pro-navbar-logo h1 {
-    font-size: 24px !important;
+    font-size: 28px !important; /* Más grande: 24px → 28px */
   }
 }
 
 @media (max-width: 480px) {
   .pro-navbar-logo h1 {
-    font-size: 22px !important;
+    font-size: 26px !important; /* Más grande: 22px → 26px */
   }
 }
 

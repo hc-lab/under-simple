@@ -47,6 +47,8 @@
   padding: 60px 0;
   background: #f8f9fa;
   border-top: 1px solid #e9ecef;
+  position: relative;
+  z-index: 100;
 }
 
 .navigation-container {
@@ -57,6 +59,8 @@
   grid-template-columns: 1fr auto 1fr;
   gap: 40px;
   align-items: center;
+  position: relative;
+  z-index: 101;
 }
 
 .nav-item {
@@ -66,11 +70,15 @@
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
+  text-decoration: none !important;
   color: #333;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 102;
+  user-select: none;
 }
 
 .nav-item::before {
@@ -136,15 +144,20 @@
 .nav-center {
   justify-self: center;
   background: linear-gradient(135deg, #333 0%, #666 100%);
-  color: white;
+  color: white !important;
   padding: 15px 25px;
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 103;
+  position: relative;
+  user-select: none;
 }
 
 .nav-center:hover {

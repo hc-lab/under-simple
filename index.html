@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UNDER MINERALS</title>
+    <title data-i18n="hero.title">UNDER MINERALS</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/mining-home.css">
     <link rel="stylesheet" href="./css/diamond-style.css">
@@ -12,8 +12,26 @@
     <link rel="stylesheet" href="./css/professional-navbar.css">
     <link rel="stylesheet" href="./css/hero-carousel.css">
     <link rel="stylesheet" href="./css/navbar-logo-black.css">
+    <link rel="stylesheet" href="./css/language-selector.css">
     <!-- Meta para asegurar que no haya problemas de interactividad -->
     <meta name="format-detection" content="telephone=no">
+    <!-- Meta tags multiidioma -->
+    <link rel="alternate" hreflang="es" href="https://underminerals.com/?lang=es">
+    <link rel="alternate" hreflang="en" href="https://underminerals.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://underminerals.com/">
+    <!-- Script de emergencia para traducción -->
+    <script src="./emergency-translate.js"></script>
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="UNDER MINERALS - Empresa minera comprometida con el desarrollo sostenible y la extracción responsable de recursos polimetálicos en Perú.">
+    <meta name="keywords" content="minería, polimetálicos, Perú, sostenibilidad, desarrollo, recursos naturales">
+    <meta name="author" content="UNDER MINERALS">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="UNDER MINERALS">
+    <meta property="og:description" content="Compromiso que nos hace grandes">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://underminerals.com">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   </head>
   <body>
     <div id="root">
@@ -23,19 +41,24 @@
           <div class="pro-navbar-logo">
             <h1>UNDER<span class="diamond-small">◆</span></h1>
           </div>
+          <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <nav class="pro-navbar-nav">
-            <a href="index.html" class="pro-nav-item">INICIO</a>
-            <a href="index.html#nosotros" class="pro-nav-item">NOSOTROS</a>
+            <a href="index.html" class="pro-nav-item" data-i18n="nav.home">INICIO</a>
+            <a href="index.html#nosotros" class="pro-nav-item" data-i18n="nav.about">NOSOTROS</a>
             <div class="pro-dropdown">
-              <a href="index.html#noticias" class="pro-dropdown-toggle">PROYECTOS <span class="arrow"></span></a>
+              <a href="index.html#noticias" class="pro-dropdown-toggle" data-i18n="nav.projects">PROYECTOS <span class="arrow"></span></a>
               <div class="pro-dropdown-menu">
-                <a href="proyectos/flor-de-kantu.html" class="pro-dropdown-item">FLOR DE KANTU</a>
-                <a href="proyectos/guadalupe.html" class="pro-dropdown-item">GUADALUPE</a>
-                <a href="proyectos/santamaria.html" class="pro-dropdown-item">SANTAMARIA</a>
-                <a href="proyectos/prosperidad.html" class="pro-dropdown-item">PROSPERIDAD</a>
+                <a href="proyectos/flor-de-kantu.html" class="pro-dropdown-item" data-i18n="projects.florDeKantu.title">FLOR DE KANTU</a>
+                <a href="proyectos/guadalupe.html" class="pro-dropdown-item" data-i18n="projects.guadalupe.title">GUADALUPE</a>
+                <a href="proyectos/santamaria.html" class="pro-dropdown-item" data-i18n="projects.santamaria.title">SANTAMARIA</a>
+                <a href="proyectos/prosperidad.html" class="pro-dropdown-item" data-i18n="projects.prosperidad.title">PROSPERIDAD</a>
               </div>
             </div>
-            <a href="index.html#contacto" class="pro-nav-item">CONTACTO</a>
+            <a href="index.html#contacto" class="pro-nav-item" data-i18n="nav.contact">CONTACTO</a>
           </nav>
         </header>
 
@@ -55,9 +78,9 @@
         <!-- Proyectos Principales Section -->
         <section id="noticias" class="mining-news visible">
           <div class="mining-section-header">
-            <h2>PRINCIPALES PROYECTOS</h2>
-              <p>Tenemos hoy en nuestro portafolio operaciones mineras de polimetalicos (2,500 toneladas mensuales) y otros 2,300 Hectáreas tituladas de proyectos Green Field, que serán desarrollados en los próximos 24 meses.</p>
-              <p>Nuestro modelo de operación integra gestión eficiente de costos y compromiso con el entorno y los grupos de interés, respaldado por un sólido desempeño operativo y avances sostenidos en producción.</p>
+            <h2 data-i18n="projects.title">PRINCIPALES PROYECTOS</h2>
+              <p data-i18n="projects.subtitle">Tenemos hoy en nuestro portafolio operaciones mineras de polimetalicos (2,500 toneladas mensuales) y otros 2,300 Hectáreas tituladas de proyectos Green Field, que serán desarrollados en los próximos 24 meses.</p>
+              <p data-i18n="projects.description">Nuestro modelo de operación integra gestión eficiente de costos y compromiso con el entorno y los grupos de interés, respaldado por un sólido desempeño operativo y avances sostenidos en producción.</p>
           </div>
           <div class="project-cards-container">
             <!-- Proyecto 1 - Flor de Kantu -->
@@ -68,7 +91,7 @@
                   <div class="project-card-overlay"></div>
                 </div>
                 <div class="project-card-title">
-                  <h3>FLOR DE KANTÚ</h3>
+                  <h3 data-i18n="projects.florDeKantu.title">FLOR DE KANTÚ</h3>
                 </div>
               </div>
             </a>
@@ -82,7 +105,7 @@
                   <div class="project-card-overlay"></div>
                 </div>
                 <div class="project-card-title">
-                  <h3>SANTAMARÍA</h3>
+                  <h3 data-i18n="projects.santamaria.title">SANTAMARÍA</h3>
                 </div>
               </div>
             </a>
@@ -96,7 +119,7 @@
                   <div class="project-card-overlay"></div>
                 </div>
                 <div class="project-card-title">
-                  <h3>GUADALUPE</h3>
+                  <h3 data-i18n="projects.guadalupe.title">GUADALUPE</h3>
                 </div>
               </div>
             </a>
@@ -110,7 +133,7 @@
                   <div class="project-card-overlay"></div>
                 </div>
                 <div class="project-card-title">
-                  <h3>PROSPERIDAD</h3>
+                  <h3 data-i18n="projects.prosperidad.title">PROSPERIDAD</h3>
                 </div>
               </div>
             </a>
@@ -121,10 +144,10 @@
         <section id="nosotros" class="mining-about visible">
           <div class="mining-about-container">
             <div class="mining-about-content">
-              <h2>SOBRE NOSOTROS</h2>
-              <p>Somos una empresa minera en crecimiento, comprometida con el desarrollo de la Pequeña y Mediana Minería en Perú</p>
-              <p>Con la incorporación de la Sociedad Minera San Bartolomé, aportamos más de 17 años de experiencia, guiados por el respeto al Medio Ambiente y al desarrollo comunitario.</p>
-              <p>Nuestra misión es crecer de forma responsable y sostenible, demostrando que este rubro es rentable y genera una huella positiva en lo social y ambiental.</p>
+              <h2 data-i18n="about.title">SOBRE NOSOTROS</h2>
+              <p data-i18n="about.description1">Somos una empresa minera en crecimiento, comprometida con el desarrollo de la Pequeña y Mediana Minería en Perú</p>
+              <p data-i18n="about.description2">Con la incorporación de la Sociedad Minera San Bartolomé, aportamos más de 17 años de experiencia, guiados por el respeto al Medio Ambiente y al desarrollo comunitario.</p>
+              <p data-i18n="about.description3">Nuestra misión es crecer de forma responsable y sostenible, demostrando que este rubro es rentable y genera una huella positiva en lo social y ambiental.</p>
               <div class="mining-about-stats">
                 <div class="mining-stat">
                   <div class="stat-content">
@@ -132,34 +155,34 @@
                       <span class="mining-stat-number">17</span>
                       <span class="mining-stat-plus">+</span>
                     </div>
-                    <span class="mining-stat-label">Años en actividad</span>
+                    <span class="mining-stat-label" data-i18n="stats.experience">Años en actividad</span>
                   </div>
                 </div>
                 <div class="mining-stat">
                   <div class="stat-content">
                     <div class="stat-value">
                       <span class="mining-stat-number">3</span>
-                      <span class="mining-stat-unit">mil</span>
+                      <span class="mining-stat-unit" data-i18n="stats.thousand">mil</span>
                       <span class="mining-stat-plus">+</span>
                     </div>
-                    <span class="mining-stat-label">Hectáreas Concesionadas</span>
+                    <span class="mining-stat-label" data-i18n="stats.hectares">Hectáreas Concesionadas</span>
                   </div>
                 </div>
                 <div class="mining-stat">
                   <div class="stat-content">
                     <div class="stat-value">
                       <span class="mining-stat-number">230</span>
-                      <span class="mining-stat-unit">mil TN</span>
+                      <span class="mining-stat-unit" data-i18n="stats.thousandTons">mil TN</span>
                       <span class="mining-stat-plus">+</span>
                     </div>
-                    <span class="mining-stat-label">Reservas cubicadas</span>
+                    <span class="mining-stat-label" data-i18n="stats.reserves">Reservas cubicadas</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="mining-about-image">
               <img src="img/Operaciones mineras/(2).jpeg" alt="Operaciones mineras">
-              <div class="mining-team-caption">Nuestro equipo</div>
+              <div class="mining-team-caption" data-i18n="about.teamCaption">Nuestro equipo</div>
             </div>
           </div>
         </section>
@@ -167,8 +190,8 @@
         <!-- Contacto Section -->
         <section id="contacto" class="mining-contact visible">
           <div class="mining-section-header">
-            <h2>CONTACTO</h2>
-            <p>¿Interesado en conocer más sobre nuestros proyectos o en colaborar con nosotros? Estamos aquí para escucharte.</p>
+            <h2 data-i18n="contact.title">CONTACTO</h2>
+            <p data-i18n="contact.subtitle">¿Interesado en conocer más sobre nuestros proyectos o en colaborar con nosotros? Estamos aquí para escucharte.</p>
           </div>
           <div class="mining-contact-container">
             <div class="mining-contact-info centered-contact-info">
@@ -180,7 +203,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3>Dirección</h3>
+                  <h3 data-i18n="contact.info.address">Dirección</h3>
                   <p>Lima, Perú</p>
                 </div>
               </div>
@@ -191,7 +214,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3>Email</h3>
+                  <h3 data-i18n="contact.info.email">Email</h3>
                   <p>notificaciones@underminerals.com</p>
                 </div>
               </div>
@@ -202,7 +225,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h3>Teléfono</h3>
+                  <h3 data-i18n="contact.info.phone">Teléfono</h3>
                   <p>+51 987 144 513</p>
                 </div>
               </div>
@@ -214,25 +237,25 @@
         <footer class="mining-footer">
           <div class="mining-footer-container">
             <div class="mining-footer-logo">
-              <h2>UNDER</h2>
-              <p>COMPROMISO QUE NOS HACE GRANDES</p>
+              <h2 data-i18n="footer.company">UNDER</h2>
+              <p data-i18n="footer.tagline">COMPROMISO QUE NOS HACE GRANDES</p>
             </div>
             <div class="mining-footer-links">
               <div class="mining-footer-links-column">
-                <h3>Enlaces</h3>
-                <a href="#">INICIO</a>
-                <a href="#nosotros">NOSOTROS</a>
-                <a href="#noticias">PROYECTOS</a>
-                <a href="#contacto">CONTACTO</a>
+                <h3 data-i18n="footer.links">Enlaces</h3>
+                <a href="#" data-i18n="nav.home">INICIO</a>
+                <a href="#nosotros" data-i18n="nav.about">NOSOTROS</a>
+                <a href="#noticias" data-i18n="nav.projects">PROYECTOS</a>
+                <a href="#contacto" data-i18n="nav.contact">CONTACTO</a>
               </div>
               <div class="mining-footer-links-column">
-                <h3 style="cursor: pointer !important;">Legal</h3>
-                <a href="#" style="cursor: pointer !important;">Términos y condiciones</a>
-                <a href="#" style="cursor: pointer !important;">Política de privacidad</a>
-                <a href="#" style="cursor: pointer !important;">Política de cookies</a>
+                <h3 style="cursor: pointer !important;" data-i18n="footer.legal">Legal</h3>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.terms">Términos y condiciones</a>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.privacy">Política de privacidad</a>
+                <a href="#" style="cursor: pointer !important;" data-i18n="footer.cookies">Política de cookies</a>
               </div>
               <div class="mining-footer-links-column">
-                <h3 style="cursor: pointer !important;">Síguenos</h3>
+                <h3 style="cursor: pointer !important;" data-i18n="footer.follow">Síguenos</h3>
                 <div class="mining-social-links">
                   <a href="#" class="mining-social-link" style="cursor: pointer !important;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
@@ -251,7 +274,7 @@
             </div>
           </div>
           <div class="mining-footer-bottom">
-            <p>&copy; 2025 UNDER. Todos los derechos reservados.</p>
+            <p>&copy; 2025 UNDER. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
           </div>
         </footer>
       </div>
@@ -264,6 +287,30 @@
 
     <!-- Script para el navbar profesional -->
     <script src="./js/professional-navbar.js"></script>
+    <!-- Script para multiidioma -->
+    <script src="./js/i18n.js"></script>
+    <!-- Script de depuración -->
+    <script src="./debug-translations.js"></script>
+    <!-- Script de traducción forzada -->
+    <script src="./force-translate.js"></script>
+    <!-- Script para aplicar traducciones automáticamente -->
+    <script src="./apply-translations-to-index.js"></script>
+    <script>
+      // Aplicar traducciones automáticamente cuando se carga la página
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.applyTranslationsToIndex) {
+          setTimeout(() => {
+            window.applyTranslationsToIndex();
+            // Ejecutar depuración después de aplicar traducciones
+            setTimeout(() => {
+              if (window.debugTranslations) {
+                window.debugTranslations();
+              }
+            }, 500);
+          }, 1000); // Esperar 1 segundo para que i18n se inicialice
+        }
+      });
+    </script>
     <!-- Script adicional para asegurar la interactividad -->
     <script>
       // Asegurar que todos los elementos sean interactivos

@@ -55,7 +55,49 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Ejecutar la función para marcar el enlace activo
   setActiveLink();
-  
+
+  // Hacer el logo clicable para ir al inicio
+  const logo = document.querySelector('.pro-navbar-logo h1');
+  if (logo) {
+    logo.addEventListener('click', function() {
+      // Si estamos en una página de proyecto, ir al index
+      if (window.location.pathname.includes('/proyectos/')) {
+        window.location.href = '../index.html';
+      } else {
+        // Si estamos en index, ir al top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  // Manejo del menú móvil hamburguesa
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileNav = document.querySelector('.pro-navbar-nav');
+
+  if (mobileMenuToggle && mobileNav) {
+    mobileMenuToggle.addEventListener('click', function() {
+      mobileMenuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('mobile-active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll('.pro-nav-item, .pro-dropdown-item');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenuToggle.classList.remove('active');
+        mobileNav.classList.remove('mobile-active');
+      });
+    });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', function(e) {
+      if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
+        mobileNav.classList.remove('mobile-active');
+      }
+    });
+  }
+
   // Mejorar la accesibilidad para dispositivos táctiles
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     const dropdown = document.querySelector('.pro-dropdown');

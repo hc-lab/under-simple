@@ -1,0 +1,114 @@
+/* Footer */
+.mining-footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  color: white;
+  padding: 80px 40px 0;
+}
+
+.mining-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.mining-footer-logo h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.mining-footer-logo p {
+  font-size: 16px;
+  opacity: 0.8;
+  max-width: 300px;
+}
+
+.mining-footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.mining-footer-links-column h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.mining-footer-links-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+}
+
+.mining-footer-links-column a {
+  display: block;
+  color: white;
+  opacity: 0.8;
+  margin-bottom: 15px;
+  transition: opacity 0.2s;
+}
+
+.mining-footer-links-column a:hover {
+  opacity: 1;
+}
+
+.mining-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.mining-social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.mining-social-link:hover {
+  background-color: white;
+  transform: translateY(-3px);
+}
+
+.mining-social-link:hover svg {
+  fill: #333333;
+}
+
+.mining-social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.mining-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .mining-footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mining-footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

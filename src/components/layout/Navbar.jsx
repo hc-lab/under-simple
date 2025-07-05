@@ -83,7 +83,7 @@ const Navbar = () => {
         </NavLink>
 
         <button 
-          className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`} 
+          className={`pro-mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`} 
           onClick={toggleMobileMenu}
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-menu"

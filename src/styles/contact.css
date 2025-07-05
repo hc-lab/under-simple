@@ -67,8 +67,10 @@
 }
 
 .contact-info-icon {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
   background: #1a1a1a;
   border-radius: 50%;
   display: flex;
@@ -77,6 +79,7 @@
   margin-bottom: 20px;
   transition: all 0.3s ease;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .contact-info-item:hover .contact-info-icon {
@@ -85,9 +88,12 @@
 }
 
 .contact-info-icon svg {
-  width: 35px;
-  height: 35px;
+  width: 24px;
+  height: 24px;
+  max-width: 100%;
+  max-height: 100%;
   color: #ffffff;
+  display: block;
 }
 
 .contact-info-text {
@@ -98,7 +104,7 @@
 }
 
 .contact-info-text h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 10px;
@@ -136,18 +142,18 @@
   }
 
   .contact-info-icon {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 15px;
   }
 
   .contact-info-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
 
   .contact-info-text h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -166,12 +172,117 @@
   }
 
   .contact-info-icon {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
   }
 
   .contact-info-icon svg {
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Unificar estilos de iconos de contacto en Home y Contacto */
+.mining-contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.mining-contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.mining-contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-color: #dee2e6;
+}
+
+.mining-contact-icon {
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.mining-contact-item:hover .mining-contact-icon {
+  background: #333333;
+  transform: scale(1.1);
+}
+
+.mining-contact-icon svg {
+  width: 24px;
+  height: 24px;
+  max-width: 100%;
+  max-height: 100%;
+  color: #ffffff;
+  display: block;
+}
+
+.mining-contact-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.mining-contact-item p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mining-contact-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .mining-contact-item {
+    padding: 25px 15px;
+  }
+  .mining-contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  .mining-contact-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .mining-contact-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mining-contact-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .mining-contact-icon svg {
+    width: 18px;
+    height: 18px;
   }
 }

@@ -1,19 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../styles/contact.css';
-// import ScrollDownArrow from '../components/ui/ScrollDownArrow';
 
 const Contacto = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="contact-section" style={{ position: 'relative', minHeight: '100vh' }}>
-      <div className="contact-header">
-        <h1>{t('navbar.contact')}</h1>
-        <div className="elegant-line"></div>
-      </div>
-      {/* <ScrollDownArrow targetId="contact-form" /> */}
-      <div id="contact-form" style={{ height: '1px' }}></div>
+    <section className="contact-page">
       <div className="contact-container simplified">
         <div className="contact-info-container">
           <h2>{t('contact.infoTitle')}</h2>

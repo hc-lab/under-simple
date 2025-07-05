@@ -24,9 +24,9 @@ i18n
           contactSection: {
             title: 'CONTACT',
             description: 'Interested in learning more about our projects or collaborating with us? We are here to listen.',
-            office: 'OFFICE',
-            email: 'EMAIL',
-            phone: 'PHONE'
+            office: 'Office',
+            email: 'Email',
+            phone: 'Phone'
           },
           aboutSection: {
             title: 'ABOUT US',
@@ -182,9 +182,9 @@ i18n
           contactSection: {
             title: 'CONTACTO',
             description: '¿Interesado en conocer más sobre nuestros proyectos o en colaborar con nosotros? Estamos aquí para escucharte.',
-            office: 'OFICINA',
-            email: 'CORREO',
-            phone: 'TELÉFONO'
+            office: 'Oficina',
+            email: 'Correo',
+            phone: 'Teléfono'
           },
           aboutSection: {
             title: 'SOBRE NOSOTROS',

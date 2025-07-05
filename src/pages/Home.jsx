@@ -5,7 +5,7 @@ import ContactSection from '../components/sections/ContactSection';
 
 const Home = () => {
   return (
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
+    <div>
       <Hero />
       <ProjectsSection />
       <AboutSection />

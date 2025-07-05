@@ -8,12 +8,12 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="proyectos-container" style={{ position: 'relative', minHeight: '100vh' }}>
+    <div className="proyectos-container">
       <div className="proyectos-header">
         <h1>{t('navbar.projects')}</h1>
         <div className="elegant-line"></div>
       </div>
-      <div className="proyectos-list" id="proyectos-list">
+      <div className="proyectos-list">
         {Object.entries(principalesProyectos).map(([projectId, project]) => {
           const i18nProjectId = projectId.replace('flor-de-', '');
           return (

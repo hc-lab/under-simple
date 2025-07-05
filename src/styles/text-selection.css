@@ -1,0 +1,32 @@
+/* Estilos para habilitar la selección de texto en todo el sitio */
+
+/* Regla global para permitir la selección de texto en todo el sitio */
+* {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  pointer-events: auto !important;
+}
+
+/* Asegurar que los elementos interactivos mantengan su cursor apropiado */
+a, button, input, textarea, select, .mining-submit-button,
+.mining-nav-link, .project-card-wrapper, .mining-social-link,
+.mining-footer-links-column a, .mining-footer-links-column h3 {
+  cursor: pointer !important;
+}
+
+/* Asegurar que los campos de texto mantengan su cursor de texto */
+input[type="text"], input[type="email"], textarea {
+  cursor: text !important;
+}
+
+/* Asegurar que los elementos de texto tengan el cursor adecuado */
+p, h1, h2, h3, h4, h5, h6, span, div:not(a):not(button) {
+  cursor: auto !important;
+}
+
+/* Excepciones específicas para elementos que necesitan pointer-events: none */
+.elegant-line, .project-card-overlay, .mining-hero::before, .mining-hero::after {
+  pointer-events: none !important;
+}

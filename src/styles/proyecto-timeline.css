@@ -5,9 +5,8 @@
 
 .timeline-container {
   position: relative;
-  max-width: 1200px; /* Increased from 1100px for larger images */
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* Default Timeline Styles */
@@ -19,13 +18,8 @@
 
 .proyecto-timeline:not(.fk-timeline-alt) .timeline-item {
   display: flex;
-  gap: 40px; /* Increased from 30px for better spacing with larger images */
+  gap: 30px;
   align-items: flex-start;
-  margin-bottom: 50px; /* Added spacing between timeline items */
-}
-
-.proyecto-timeline:not(.fk-timeline-alt) .timeline-item:last-child {
-  margin-bottom: 0;
 }
 
 .proyecto-timeline:not(.fk-timeline-alt) .timeline-image-container {
@@ -33,17 +27,10 @@
 }
 
 .proyecto-timeline:not(.fk-timeline-alt) .timeline-image {
-  width: 320px; /* Increased from 200px */
-  height: 200px; /* Increased from 130px */
+  width: 200px;
+  height: 130px;
   object-fit: cover;
-  border-radius: 8px; /* Slightly larger radius */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.proyecto-timeline:not(.fk-timeline-alt) .timeline-image:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
 }
 
 .proyecto-timeline:not(.fk-timeline-alt) .timeline-phase {
@@ -74,9 +61,8 @@
 
 .timeline-container-alt {
   position: relative;
-  max-width: 1000px; /* Increased from 850px for larger images */
+  max-width: 850px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .timeline-container-alt::after {
@@ -128,18 +114,12 @@
 }
 
 .timeline-image-container-alt {
-  width: 350px; /* Increased from 220px */
-  height: 220px; /* Increased from 150px */
-  border-radius: 10px; /* Slightly larger radius */
+  width: 220px;
+  height: 150px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Enhanced shadow */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   margin: 0 auto; /* Center image in its column */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-image-container-alt:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
 }
 
 .timeline-image-container-alt img { width: 100%; height: 100%; object-fit: cover; }
@@ -161,282 +141,3 @@
 .timeline-status.completada { background-color: #e4f4e8; color: #4caf50; }
 .timeline-status.en-operación { background-color: #fff8e1; color: #ffab00; }
 .timeline-status.futuro { background-color: #f5f5f5; color: #888; }
-
-/* Phase Number Styles */
-.timeline-phase-number {
-  display: none; /* Hidden on desktop */
-}
-
-.phase-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #333 0%, #555 100%);
-  color: white;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 2;
-}
-
-/* Responsive Design for Timeline Images */
-@media (max-width: 1200px) {
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-image {
-    width: 280px;
-    height: 175px;
-  }
-  
-  .timeline-image-container-alt {
-    width: 300px;
-    height: 190px;
-  }
-}
-
-@media (max-width: 992px) {
-  /* Mobile Timeline - Clear and Consistent Design */
-  .proyecto-timeline {
-    padding: 60px 20px;
-  }
-  
-  .timeline-container,
-  .timeline-container-alt {
-    max-width: 100%;
-    padding: 0;
-    position: relative;
-  }
-  
-  /* Show phase numbers on mobile */
-  .timeline-phase-number {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 3;
-  }
-  
-  /* Add vertical timeline line for mobile */
-  .timeline-container::before,
-  .timeline-container-alt::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #e0e0e0 0%, #e0e0e0 50%, transparent 100%);
-    z-index: 1;
-  }
-  
-  /* Timeline items for both types - Clear and Consistent Mobile Layout */
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item,
-  .timeline-item-alt {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    padding: 25px 20px 25px 60px; /* Space for timeline line and phase number */
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid #333;
-  }
-  
-  /* Phase number positioning on mobile */
-  .timeline-phase-number {
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    z-index: 3;
-  }
-  
-  /* Timeline dots - smaller and cleaner */
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item::before,
-  .timeline-item-alt::before {
-    content: '';
-    position: absolute;
-    left: 19px; /* Align with timeline line */
-    top: 30px;
-    width: 12px;
-    height: 12px;
-    background: #333;
-    border-radius: 50%;
-    z-index: 2;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Timeline images - consistent size and order */
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-image,
-  .timeline-image-container-alt {
-    width: 100%;
-    height: 220px;
-    margin: 16px 0 0 0; /* Always at the bottom */
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-  }
-  
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-image img,
-  .timeline-image-container-alt img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-image:hover img,
-  .timeline-image-container-alt:hover img {
-    transform: scale(1.05);
-  }
-  
-  /* Timeline cards - consistent styling */
-  .timeline-card {
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    border-left: none;
-    margin-bottom: 0;
-  }
-  
-  /* Timeline content - consistent styling */
-  .timeline-content {
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    border-left: none;
-  }
-  
-  /* Phase indicators - cleaner design */
-  .timeline-phase,
-  .timeline-phase-alt {
-    display: none; /* Hide the text phase indicator, use number instead */
-  }
-  
-  /* Timeline titles and content */
-  .timeline-card h3,
-  .timeline-content h3 {
-    font-size: 20px;
-    margin: 0 0 12px 0;
-    color: #222;
-    font-weight: 600;
-  }
-  
-  .timeline-card p,
-  .timeline-content p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #666;
-    margin: 0 0 16px 0;
-  }
-  
-  /* Status badges */
-  .timeline-status {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    margin-top: 8px;
-  }
-  
-  /* Hide desktop elements */
-  .timeline-container-alt::after,
-  .timeline-item-alt::after {
-    display: none;
-  }
-  
-  .timeline-content-col {
-    width: 100%;
-  }
-  
-  /* Add subtle animations for mobile */
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item,
-  .timeline-item-alt {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item:nth-child(1),
-  .timeline-item-alt:nth-child(1) { animation-delay: 0.1s; }
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item:nth-child(2),
-  .timeline-item-alt:nth-child(2) { animation-delay: 0.2s; }
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item:nth-child(3),
-  .timeline-item-alt:nth-child(3) { animation-delay: 0.3s; }
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item:nth-child(4),
-  .timeline-item-alt:nth-child(4) { animation-delay: 0.4s; }
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .proyecto-timeline {
-    padding: 40px 15px;
-  }
-  
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item,
-  .timeline-item-alt {
-    padding: 20px 15px 20px 50px; /* Reduced padding for smaller screens */
-    margin-bottom: 35px;
-  }
-  
-  /* Phase number - smaller for mobile */
-  .phase-number {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-  }
-  
-  .timeline-phase-number {
-    left: 8px;
-    top: 15px;
-  }
-  
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-item::before,
-  .timeline-item-alt::before {
-    left: 15px; /* Adjust dot position */
-    top: 23px;
-    width: 10px;
-    height: 10px;
-  }
-  
-  .timeline-container::before,
-  .timeline-container-alt::before {
-    left: 19px; /* Adjust line position */
-  }
-  
-  .proyecto-timeline:not(.fk-timeline-alt) .timeline-image,
-  .timeline-image-container-alt {
-    height: 180px; /* Slightly smaller for mobile */
-    margin: 12px 0 0 0;
-  }
-  
-  .timeline-card h3,
-  .timeline-content h3 {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-  }
-  
-  .timeline-card p,
-  .timeline-content p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 12px 0;
-  }
-  
-  .timeline-status {
-    font-size: 11px;
-    padding: 5px 12px;
-    margin-top: 6px;
-  }
-}

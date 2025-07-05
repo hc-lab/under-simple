@@ -45,18 +45,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mining-footer-bottom">
-        <p>&copy; {currentYear} |    UNDER◆    | Todos los derechos reservados.</p>
-        <div className="developer-signature">
-          <span>Powered by: </span>
-          <a 
-            href="https://www.linkedin.com/in/hitlersantamaria/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="developer-link"
-          >
-            Hitler Santamaría
-          </a>
-        </div>
+        <p>&copy; {currentYear} UNDER. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

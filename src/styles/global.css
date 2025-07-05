@@ -3,118 +3,34 @@
 @tailwind utilities;
 
 :root {
-  /* Professional Monochrome Color Palette */
-  --primary-color: #1a1a1a; /* Deep Black */
-  --primary-dark: #000000;
-  --primary-light: #333333;
-  --secondary-color: #666666; /* Medium Gray */
+  --primary-color: #333333;
+  --primary-dark: #1a1a1a;
+  --primary-light: #555555;
+  --secondary-color: #666666;
   --secondary-dark: #444444;
   --secondary-light: #888888;
-  --accent-color: #999999; /* Light Gray Accent */
-  --accent-dark: #777777;
-  --accent-light: #bbbbbb;
-  
-  /* Neutral Colors - Professional Grays */
-  --neutral-50: #fafafa;
-  --neutral-100: #f5f5f5;
-  --neutral-200: #eeeeee;
-  --neutral-300: #e0e0e0;
-  --neutral-400: #bdbdbd;
-  --neutral-500: #9e9e9e;
-  --neutral-600: #757575;
-  --neutral-700: #616161;
-  --neutral-800: #424242;
-  --neutral-900: #212121;
-  
-  /* Semantic Colors - Monochrome */
-  --success-color: #4caf50;
-  --warning-color: #ff9800;
-  --error-color: #f44336;
-  --info-color: #2196f3;
-  
-  /* Background & Surface */
-  --background-color: var(--neutral-50);
+  --success-color: #444444;
+  --warning-color: #666666;
+  --error-color: #444444;
+  --background-color: #f5f5f5;
   --surface-color: #ffffff;
-  --surface-elevated: #ffffff;
-  --surface-overlay: rgba(255, 255, 255, 0.95);
-  
-  /* Text Colors */
-  --text-primary: var(--neutral-900);
-  --text-secondary: var(--neutral-600);
-  --text-tertiary: var(--neutral-500);
-  --text-inverse: #ffffff;
-  
-  /* Spacing System */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-  
-  /* Typography */
+  --text-primary: #212121;
+  --text-secondary: #757575;
+  /* Fluid base font size */
   --fs-base: clamp(0.95rem, 0.45vw + 0.8rem, 1.1rem);
-  --fs-sm: clamp(0.875rem, 0.4vw + 0.75rem, 1rem);
-  --fs-lg: clamp(1.125rem, 0.5vw + 1rem, 1.25rem);
-  --fs-xl: clamp(1.25rem, 0.6vw + 1.125rem, 1.5rem);
-  --fs-2xl: clamp(1.5rem, 0.8vw + 1.375rem, 2rem);
-  --fs-3xl: clamp(1.875rem, 1vw + 1.75rem, 2.5rem);
-  --fs-4xl: clamp(2.25rem, 1.2vw + 2.125rem, 3rem);
-  
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  
-  /* Transitions */
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 250ms ease-in-out;
-  --transition-slow: 350ms ease-in-out;
-  
-  /* Z-Index Scale */
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
-  --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
+  --border-color: #e0e0e0;
 
-  font-size: 16px;
+  font-size: 16px; /* Base font size */
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--neutral-900);
-    --surface-color: var(--neutral-800);
-    --surface-elevated: var(--neutral-700);
-    --surface-overlay: rgba(33, 33, 33, 0.95);
-    --text-primary: var(--neutral-50);
-    --text-secondary: var(--neutral-300);
-    --text-tertiary: var(--neutral-400);
-  }
-}
-
-html, body {
-  background-color: #fff !important;
-  font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background-color);
   color: var(--text-primary);
   min-height: 100vh;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
   font-size: var(--fs-base);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Ensure anchored sections are not hidden under fixed header */
@@ -122,25 +38,13 @@ html, body {
   scroll-margin-top: 90px;
 }
 
-/* Improved link styles */
 a {
   text-decoration: none;
   color: var(--primary-color);
-  transition: color var(--transition-fast);
+  transition: color 0.2s;
 }
-
 a:hover {
   color: var(--primary-dark);
-}
-
-/* Focus styles for accessibility */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
 }
 
 #root {
@@ -150,28 +54,25 @@ select:focus {
   flex-direction: column;
 }
 
-/* Utility classes */
+/* Tailwind helpers para fondo y texto */
 .bg-primary { background-color: var(--primary-color); }
-.bg-secondary { background-color: var(--secondary-color); }
-.bg-accent { background-color: var(--accent-color); }
 .bg-surface { background-color: var(--surface-color); }
-.bg-surface-elevated { background-color: var(--surface-elevated); }
-
 .text-primary { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
-.text-tertiary { color: var(--text-tertiary); }
-.text-inverse { color: var(--text-inverse); }
+.border-base { border-color: var(--border-color); }
 
-.border-base { border-color: var(--neutral-200); }
-.shadow-elevated { box-shadow: var(--shadow-lg); }
+/* ===================================
+   Responsive Typography & Layout
+==================================== */
 
-/* Responsive Typography & Layout */
+/* Tablets and small desktops */
 @media (max-width: 1024px) {
   :root {
     font-size: 15px;
   }
 }
 
+/* Mobile landscape and tablets portrait */
 @media (max-width: 768px) {
   :root {
     font-size: 14px;
@@ -182,26 +83,10 @@ select:focus {
   }
 }
 
+/* Mobile portrait */
+/* Existing media queries can remain for fallback */
 @media (max-width: 480px) {
   :root {
     font-size: 13px;
   }
-}
-
-/* Print styles */
-@media print {
-  body {
-    background: white;
-    color: black;
-  }
-  
-  .no-print {
-    display: none !important;
-  }
-}
-
-/* Línea divisoria sutil entre secciones */
-.section-divider {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 56px;
 }

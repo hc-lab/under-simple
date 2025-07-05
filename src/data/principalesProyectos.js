@@ -50,7 +50,6 @@ export const principalesProyectos = {
     ],
     stats: []
   },
-
   'santamaria': {
     title: 'projects.santamaria.title',
     dropdownTitle: 'projects.santamaria.dropdownTitle',
@@ -69,7 +68,6 @@ export const principalesProyectos = {
     ],
     stats: []
   },
-
   'prosperidad': {
     title: 'projects.prosperidad.title',
     dropdownTitle: 'projects.prosperidad.dropdownTitle',
@@ -86,7 +84,7 @@ export const principalesProyectos = {
       '/img/Prosperidad/prosperidad-3.jpeg',
     ],
     stats: [
-      { value: 'Centro del Perú' },
+      { value: 'Norte del Perú' },
       { value: 'Prosperidad 137' },
       { value: 'Cu-Mo, Au-Ag, Pb-Zn' },
       { value: 'Pórfidos, Skarns, Epitermales' }

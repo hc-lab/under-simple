@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import * as icons from 'lucide-react';
-import PropTypes from 'prop-types';
 
 const DynamicIcon = ({ name, ...props }) => {
   const IconComponent = icons[name];
@@ -11,10 +10,6 @@ const DynamicIcon = ({ name, ...props }) => {
   }
 
   return <IconComponent {...props} />;
-};
-
-DynamicIcon.propTypes = {
-  name: PropTypes.string.isRequired,
 };
 
 export default DynamicIcon;

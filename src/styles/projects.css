@@ -217,7 +217,6 @@
   padding: 20px 15px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 64px;
 }
 
 .project-cards-container::-webkit-scrollbar {
@@ -236,12 +235,12 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
-  background-color: #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f0f0f0; /* Fallback for missing images */
 }
 
 .project-card:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
 }
 
@@ -295,9 +294,4 @@
   font-weight: 700;
   margin: 0;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-.mining-news {
-  background: #f5f5f5;
-  /* ...resto de estilos existentes... */
 }

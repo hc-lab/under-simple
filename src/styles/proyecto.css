@@ -1,0 +1,213 @@
+/* Estilos para las páginas de proyectos */
+
+.proyecto-section-header h2 {
+  text-transform: uppercase;
+}
+
+.proyecto-feature p {
+  text-align: center;
+  color: #333333 !important;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Hero Section - Nota: Los estilos principales están en artistic-background.css */
+
+.proyecto-hero-content {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 60px;
+}
+
+.proyecto-hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.elegant-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #000000, #333333);
+  margin: 20px 0;
+}
+
+.proyecto-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 20px;
+}
+
+.proyecto-hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.proyecto-hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.proyecto-hero-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Sección de características */
+.proyecto-features {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.proyecto-features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #000 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.proyecto-section-header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.proyecto-section-header h2 {
+  font-size: clamp(1.6rem, 4vw + 0.5rem, 2.4rem);
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.proyecto-section-header h2::before,
+.proyecto-section-header h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-section-header h2::before {
+  left: -60px;
+}
+
+.proyecto-section-header h2::after {
+  right: -60px;
+}
+
+.proyecto-section-header .elegant-line {
+  margin: 25px auto;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), #000000, rgba(0, 0, 0, 0.1));
+}
+
+.proyecto-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.proyecto-feature {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyecto-feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.proyecto-feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.proyecto-feature-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.proyecto-feature:hover .proyecto-feature-icon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e8e8e8, #d8d8d8);
+}
+
+.proyecto-feature:hover .proyecto-feature-icon svg {
+  transform: scale(1.1);
+  color: #000;
+}
+
+.proyecto-feature h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #000;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.proyecto-feature h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #000000, #555555);
+  transition: width 0.3s ease;
+}
+
+.proyecto-feature:hover h3 {
+  color: #000;
+}
+
+.proyecto-feature:hover h3::after {
+  width: 60px;
+}

@@ -1,0 +1,303 @@
+/* ===================================
+   Projects Page
+==================================== */
+
+.proyectos-container {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.mining-section-header {
+  text-align: center;
+  margin: 0 auto 50px auto;
+  max-width: 1200px;
+}
+
+.project-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 20px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, transparent);
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.proyectos-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.proyectos-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.elegant-line {
+  width: 80px;
+  height: 4px;
+  background-color: #cba258;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Projects List */
+.project-row {
+  display: flex;
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
+  gap: 40px;
+  /* Increased gap for better spacing */
+  padding: 0 40px;
+  /* Add padding to the sides */
+}
+
+.proyecto-list-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-list-item-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-list-item {
+  display: flex;
+  background-color: #fff;
+}
+
+.proyecto-list-image-container {
+  flex: 0 0 40%;
+  /* Image takes 40% of the width */
+  overflow: hidden;
+}
+
+.proyecto-list-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.proyecto-list-item-link:hover .proyecto-list-img {
+  transform: scale(1.05);
+}
+
+.proyecto-list-text-container {
+  flex: 1;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.proyecto-list-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+}
+
+.proyecto-list-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 20px 0;
+  /* Truncate text to a few lines for a cleaner look */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.proyecto-list-cta {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cba258;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.proyecto-list-item-link:hover .proyecto-list-cta {
+  color: #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .proyecto-list-item {
+    flex-direction: column;
+  }
+
+  .proyecto-list-image-container {
+    flex-basis: auto;
+    height: 250px;
+    /* Fixed height for images on mobile */
+  }
+
+  .proyecto-list-text-container {
+    padding: 25px;
+  }
+
+  .proyectos-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.mining-section-header {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.mining-section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111111;
+}
+
+.mining-section-header .portfolio-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.description-boxes {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description-box {
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.description-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-card-info h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.project-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.project-cards-container::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.project-card-wrapper {
+  text-decoration: none;
+}
+
+.project-card {
+  position: relative;
+  width: 275px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
+  background-color: #f0f0f0;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the card */
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
+}
+
+.project-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 15%, transparent 50%);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.project-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 20px;
+  color: #fff;
+  font-size: 1.5rem; /* Slightly larger font */
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-title {
+  transform: translateY(-5px);
+}
+
+.project-card-title h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.mining-news {
+  background: #f5f5f5;
+  /* ...resto de estilos existentes... */
+}

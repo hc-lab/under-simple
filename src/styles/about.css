@@ -1,0 +1,205 @@
+/* ====================================
+   About Section - Professional & Responsive
+==================================== */
+
+.mining-about {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.mining-about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mining-about-content {
+  flex: 1.5;
+  padding-right: 40px;
+}
+
+.mining-about-content h2 {
+  font-size: 2.5rem; /* Using rem for scalability */
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.mining-about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background-color: #1a1a1a; /* Using theme color */
+  border-radius: 2px;
+}
+
+.mining-about-content p {
+  font-size: 1.1rem; /* Using rem */
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.mining-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mining-stat-item {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mining-stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mining-stat-number {
+  font-size: 2.5rem; /* Using rem */
+  font-weight: 700;
+  color: #1a1a1a; /* Using theme color */
+}
+
+.mining-stat-label {
+  font-size: 0.9rem; /* Using rem */
+  color: #666;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mining-about-image {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  align-self: center; /* Better alignment */
+}
+
+.mining-about-image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-caption {
+  padding: 20px 10px 10px;
+  text-align: center;
+}
+
+.image-caption h3 {
+  font-size: 1rem; /* Using rem */
+  font-weight: 700;
+  color: #888;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.caption-line {
+  width: 40px;
+  height: 3px;
+  background-color: #ccc;
+  margin: 10px auto 0;
+}
+
+.about-section {
+  background: #fff;
+  margin-bottom: 56px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ===================================
+   Responsive Design
+==================================== */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+  .mining-about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .mining-about-content {
+    padding-right: 0;
+    text-align: center;
+    max-width: 650px; /* Constrain text width for readability */
+  }
+
+  .mining-about-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mining-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .mining-about-image {
+      max-width: 500px;
+      width: 100%;
+  }
+}
+
+/* Mobile landscape and tablets portrait */
+@media (max-width: 768px) {
+  .mining-about {
+    padding: 80px 20px;
+  }
+
+  .mining-about-content h2 {
+      font-size: 2.2rem;
+  }
+
+  .mining-about-content p {
+      font-size: 1rem;
+  }
+
+  .mining-stats {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mining-stat-item {
+      width: 100%;
+      max-width: 350px;
+  }
+
+  .mining-stat-number {
+      font-size: 2.2rem;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .mining-about {
+        padding: 60px 15px;
+    }
+
+    .mining-stats {
+        gap: 15px;
+    }
+
+    .mining-stat-item {
+        padding: 20px;
+    }
+}
